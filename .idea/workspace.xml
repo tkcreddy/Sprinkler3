@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1efe2753-907e-4970-97ec-8140e201d805" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/com/aak/modules/runtime/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/aak/modules/runtime/runzonejob.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/com/aak/modules/runtime/testjob.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewMain.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewMain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testone.py" beforeDir="false" afterPath="$PROJECT_DIR$/testone.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmulatorGUI.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample_board.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +13,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewMain.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -44,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/runzonejob.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="285">
+              <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
@@ -65,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/testjob.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
@@ -106,8 +102,8 @@
         <option value="$PROJECT_DIR$/testone.py" />
         <option value="$PROJECT_DIR$/NewMain.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/runtime/rungpiojob.py" />
-        <option value="$PROJECT_DIR$/com/aak/modules/runtime/runzonejob.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/runtime/testjob.py" />
+        <option value="$PROJECT_DIR$/com/aak/modules/runtime/runzonejob.py" />
       </list>
     </option>
   </component>
@@ -147,14 +143,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="aak" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sprinkler3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sprinkler3" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="aak" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="runtime" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -276,19 +264,25 @@
       <option name="project" value="LOCAL" />
       <updated>1548428337929</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update some run jobs and organized the files.">
+      <created>1548443616684</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1548443616684</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32921812" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4982382" visible="true" weight="0.32921812" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4982382" visible="true" weight="0.32921812" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49964765" weight="0.39917696" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -305,7 +299,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Correct Directory Structure and file locations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correct Directory Structure and file locations" />
+    <MESSAGE value="update some run jobs and organized the files." />
+    <option name="LAST_COMMIT_MESSAGE" value="update some run jobs and organized the files." />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -408,16 +403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewMain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="21" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/aak/modules/config/configread.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -448,20 +433,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/testjob.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/runzonejob.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="285">
+          <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/testjob.py">
+    <entry file="file://$PROJECT_DIR$/NewMain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        <state>
+          <caret selection-end-line="21" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
