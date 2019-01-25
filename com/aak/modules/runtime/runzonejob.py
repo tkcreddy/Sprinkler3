@@ -3,14 +3,12 @@ import traceback
 import time
 import RPi.GPIO as GPIO
 
-
 class Runzonejob():
 
     def __init__(self, zone, num_secs):
-        self.zone = zone
-        self.num_secs = num_secs
+        self.zone = int(zone)
+        self.num_secs = int(num_secs)
 
-    def runjob(self):
         try:
             getconfig = configread()
             gpioid = getconfig.GPIO(self.zone)

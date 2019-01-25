@@ -1,4 +1,7 @@
 from com.aak.modules.runtime.runzonejob import Runzonejob
+from com.aak.modules.runtime.runjobs import *
 
-x=Runzonejob(1,10)
-x.runjob()
+dct1 = { "1" : 10}
+
+runjobs(**dct1)
+
