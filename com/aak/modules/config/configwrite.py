@@ -1,0 +1,2 @@
+import jsoncfg
+config=dump_config

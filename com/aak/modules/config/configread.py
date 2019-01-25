@@ -1,8 +1,10 @@
 import jsoncfg
+import os
 class configread():
 
     def __init__(self):
-        self.config = jsoncfg.load_config('PIN.cfg')
+        self.config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),'PIN.cfg')
+        self.config = jsoncfg.load_config(self.config_path)
 
     def GPIO(self,zone):
         self.zone = zone
@@ -20,6 +22,3 @@ class configread():
             if i != 0:
                 self.gpiolist[i] = self.config.zones[i].GPIO()
         return self.gpiolist
-
-
-
