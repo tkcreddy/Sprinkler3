@@ -1,6 +1,5 @@
 from com.aak.modules.runtime.runzonejob import *
 import traceback
-
 class runjobs():
     def __init__(self,**data):
         self.jobs_hash = {}

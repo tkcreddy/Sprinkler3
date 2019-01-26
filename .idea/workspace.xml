@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1efe2753-907e-4970-97ec-8140e201d805" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/com/aak/modules/runtime/runjobs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/aak/modules/runtime/runzonejob.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/runtime/runzonejob.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/aak/modules/runtime/runjobs.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/runtime/runjobs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/aak/modules/runtime/testjob.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/runtime/testjob.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,23 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/testjob.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/runzonejob.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+            <state relative-caret-position="375">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
@@ -40,19 +27,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/runjobs.py">
+        <entry file="file://$PROJECT_DIR$/com/aak/modules/config/configread.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="165">
+              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/aak/modules/config/configwrite.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/runjobs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="13" selection-start-line="1" selection-end-line="1" selection-end-column="18" />
+            <state relative-caret-position="165">
+              <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,9 +83,9 @@
         <option value="$PROJECT_DIR$/NewMain.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/runtime/rungpiojob.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/__init__.py" />
-        <option value="$PROJECT_DIR$/com/aak/modules/runtime/runjobs.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/runtime/runzonejob.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/runtime/testjob.py" />
+        <option value="$PROJECT_DIR$/com/aak/modules/runtime/runjobs.py" />
       </list>
     </option>
   </component>
@@ -253,26 +246,39 @@
       <option name="project" value="LOCAL" />
       <updated>1548444534880</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="created runjobs  and also corrected runzonejob to force zone and number secs to int">
+      <created>1548456912418</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1548456912418</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update few lines of exceptional handling">
+      <created>1548458403384</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1548458403384</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32921812" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49682876" visible="true" weight="0.32921812" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49964765" weight="0.32921812" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49612403" visible="true" weight="0.32921812" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989429" weight="0.39917696" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.5870331" weight="0.32921812" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50317127" side_tool="true" visible="true" weight="0.32921812" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.503876" side_tool="true" visible="true" weight="0.32921812" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49964765" weight="0.32921812" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32921812" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -286,7 +292,9 @@
     <MESSAGE value="update some run jobs and organized the files." />
     <MESSAGE value="deleted unwanted files" />
     <MESSAGE value="updated modules __init__ file with new modules directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated modules __init__ file with new modules directory" />
+    <MESSAGE value="created runjobs  and also corrected runzonejob to force zone and number secs to int" />
+    <MESSAGE value="update few lines of exceptional handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="update few lines of exceptional handling" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -412,6 +420,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/venv/pyvenv.cfg">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/com/aak/modules/config/configwrite.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -419,42 +430,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/pyvenv.cfg">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/config/configread.py">
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/testjob.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/runzonejob.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        <state relative-caret-position="375">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/runjobs.py">
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/config/configread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="165">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/testjob.py">
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/runjobs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="165">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
           <folding>
-            <element signature="e#0#57#0" expanded="true" />
+            <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
