@@ -1,9 +1,12 @@
 from com.aak.modules.runtime.runzonejob import *
+from com.aak.modules.db.schedDataAccess import Programcurd
 import traceback
-class runjobs():
-    def __init__(self,**data):
+class Runjobs():
+    def __init__(self,prgid):
+        self.prgid = prgid
         self.jobs_hash = {}
-        self.jobs_hash = data
+        self.db = Programcurd()
+        self.jobs_hash = self.db.getProgramdetails(self.prgid)
         try:
             for key, value in self.jobs_hash.items():
                 Runzonejob(key,value)

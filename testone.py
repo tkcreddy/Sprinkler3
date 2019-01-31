@@ -1,4 +1,4 @@
-from com.aak.modules.config.configread import configread
+from com.aak.modules.config.configRead import configread
 import time
 import RPi.GPIO as GPIO
 

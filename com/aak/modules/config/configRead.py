@@ -1,9 +1,9 @@
 import jsoncfg
 import os
-class configread():
+class Configread():
 
     def __init__(self):
-        self.config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),'PIN.cfg')
+        self.config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),'CONFIG.cfg')
         self.config = jsoncfg.load_config(self.config_path)
 
     def GPIO(self,zone):
@@ -14,6 +14,14 @@ class configread():
     def num_zones(self):
         self.num_zones = self.config.num_of_zones()
         return self.num_zones
+
+    def scheddb_loc(self):
+        self.scheddb_loc = self.config.schedule_db()
+        return self.scheddb_loc
+
+    def numprograms(self):
+        self.num_of_program = self.config.num_of_progams()
+        return self.num_of_programs
 
     def list(self):
         self.gpiolist = {}

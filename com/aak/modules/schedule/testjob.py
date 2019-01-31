@@ -1,6 +1,4 @@
-from com.aak.modules.runtime.runjobs import *
+from com.aak.modules.runtime.runjobs import Runjobs
 
-dct1 = { "1" : 10, "2" : 20}
-
-runjobs(**dct1)
+Runjobs(2)
 
