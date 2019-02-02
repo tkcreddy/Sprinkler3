@@ -10,6 +10,10 @@ class schedDao():
         self.getConfig = Configread()
         self.sql_loc = os.path.join(os.path.dirname(os.path.abspath(__file__)), self.getConfig.scheddb_loc())
 
+    def Getsql_loc(self):
+        pass
+        return self.sql_loc
+
     def Connect(self):
         self.engine = create_engine('sqlite:///' + self.sql_loc)
         Base.metadata.create_all(self.engine)

@@ -3,6 +3,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime
 from com.aak.modules.runtime.runJobs import Runjobs
 from com.aak.modules.config.configRead import Configread
+from com.aak.modules.db.schedDao import schedDao
 import json
 import os
 schedule_app = Flask(__name__)
@@ -37,25 +38,32 @@ def schedule_getprogram():
     data = request.get_json()
     prgid = data.get('prgid')
     job = scheduler.get_job(str(prgid))
-    #c = json.loads(str(job))
     print("name: %s, id: %s, trigger: %s, next run: %s, handler: %s, argument: %s" % (
         job.name, job.id, job.trigger, job.next_run_time, job.func, job.args))
-    #print(c)
-    #print(scheduler.get_job(str(prgid)))
-    return "Welcome! %s" % jsonify(request.json)
+    #print(jsonify(job))
+    return "Welcome!"
 
 
 @schedule_app.route('/scheduleProgram', methods=['POST'])
 def schedule_program():
-    print("hello")
+    data = request.get_json()
+    prgid = data.get('prgid')
+    prgdow = data.get('day_of_week')
+    prghour = data.get('hour')
+    prgmin = data.get('minute')
+    scheduler.add_job(Runjobs,args=[prgid], trigger='cron', day_of_week=prgdow, hour=prghour, minute=prgmin, id=str(prgid))
+    return "job details: %s" % str(prgid) , 200
+
+@schedule_app.route('/updateProgram', methods=['POST'])
+def schedule_updateprogram():
     data = request.get_json()
     print(data)
     prgid = data.get('prgid')
-    jobdow = data.get('day_of_week')
-    jobhour = data.get('hour')
-    jobmin = data.get('minute')
+    prgdow = data.get('day_of_week')
+    prghour = data.get('hour')
+    prgmin = data.get('minute')
     jobid = str(prgid)
-    scheduler.add_job(Runjobs,args=[prgid], trigger='cron', day_of_week=jobdow, hour=jobhour, minute=jobmin, id=jobid)
+    scheduler.modify_job(Runjobs,args=[prgid], trigger='cron', day_of_week=prgdow, hour=prghour, minute=prgmin, id=str(prgid))
     return "job details: %s" % jobid , 200
 
 @schedule_app.route('/removeProgram', methods=['POST'])
