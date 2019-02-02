@@ -1,4 +1,4 @@
-from com.aak.modules.runtime.runzonejob import *
+from com.aak.modules.runtime.runZone import *
 from com.aak.modules.db.schedDataAccess import Programcurd
 import traceback
 class Runjobs():
