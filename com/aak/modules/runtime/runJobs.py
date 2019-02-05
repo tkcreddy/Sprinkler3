@@ -18,3 +18,5 @@ class Runjobs():
             print("completed the job")
             pass
 
+if __name__ == '__main__':
+    Runjobs()

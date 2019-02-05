@@ -2,13 +2,17 @@ from sqlalchemy import Column, Integer, String, JSON, Sequence, Table
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 import os
+
+
 from com.aak.modules.config.configRead import Configread
 
 Base = declarative_base()
 class schedDao():
     def __init__(self):
+        BASE_PATH = '../db'
         self.getConfig = Configread()
-        self.sql_loc = os.path.join(os.path.dirname(os.path.abspath(__file__)), self.getConfig.scheddb_loc())
+        #self.sql_loc = os.path.join(os.path.dirname(os.path.abspath(__file__)), self.getConfig.scheddb_loc())
+        self.sql_loc = os.path.join(BASE_PATH, self.getConfig.scheddb_loc())
 
     def Getsql_loc(self):
         pass

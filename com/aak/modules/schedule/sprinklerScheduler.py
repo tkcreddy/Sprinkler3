@@ -5,14 +5,16 @@ from datetime import datetime
 from com.aak.modules.runtime.runJobs import Runjobs
 from com.aak.modules.config.configRead import Configread
 import traceback
-
-
 import os
+
+
+BASE_PATH = '../db'
+
 schedule_app = Flask(__name__)
 
 getConfig = Configread()
-sql_loc = os.path.join(os.path.dirname(os.path.abspath(__file__)), getConfig.scheddb_loc())
-
+#sql_loc = os.path.join(os.path.dirname(os.path.abspath(__file__)), getConfig.scheddb_loc())
+sql_loc = os.path.join(BASE_PATH, getConfig.scheddb_loc())
 scheduler = BackgroundScheduler()
 scheduler.add_jobstore('sqlalchemy', url='sqlite:///'+ sql_loc)
 scheduler.start()
