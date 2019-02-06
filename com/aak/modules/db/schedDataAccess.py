@@ -1,6 +1,7 @@
 from com.aak.modules.db.schedDao import schedDao,Schedule, Base
 from sqlalchemy.orm import sessionmaker
 import json
+import traceback
 
 class Programcurd(object):
     def __init__(self):
@@ -18,14 +19,17 @@ class Programcurd(object):
         return self.sdata
 
     def updateProgramdetails(self,id, **jd):
-        self.jd = {}
-        session = self.DBSession()
-        self.job = session.query(Schedule).filter(Schedule.id == id).one()
-        self.jd = jd
-        print(self.job.Job_details)
-        self.job.Job_details = str(self.jd)
-        print(self.job.Job_details)
-        session.commit()
+        try:
+            self.jd = {}
+            session = self.DBSession()
+            self.job = session.query(Schedule).filter(Schedule.id == id).one()
+            self.jd = jd
+            #print(self.job.Job_details)
+            self.job.Job_details = str(self.jd)
+            #print(self.job.Job_details)
+            session.commit()
+        except Exception as ex:
+            traceback.print_exc()
 
 
 #x = Programcurd()

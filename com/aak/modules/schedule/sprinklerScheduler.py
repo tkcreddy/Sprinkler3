@@ -4,28 +4,30 @@ from apscheduler.jobstores.base import *
 from datetime import datetime
 from com.aak.modules.runtime.runJobs import Runjobs
 from com.aak.modules.config.configRead import Configread
+from com.aak.modules.db.schedDataAccess import Programcurd
 import traceback
 import os
+import json
 
 
 BASE_PATH = '../db'
 
 schedule_app = Flask(__name__)
-
 getConfig = Configread()
 sql_loc = os.path.join(BASE_PATH, getConfig.scheddb_loc())
 scheduler = BackgroundScheduler()
 scheduler.add_jobstore('sqlalchemy', url='sqlite:///'+ sql_loc)
 scheduler.start()
 
-def addprogram(prgid,dow,hour,minute ):
+
+
+def addprogram(prgid,dow,hour,min ):
     try:
-        prgdow = dow
-        prghour = str(int(hour))
-        prgmin = str(int(minute))
-        scheduler.add_job(Runjobs,args=[prgid], trigger='cron', day_of_week=prgdow, hour=prghour, minute=prgmin, id=str(prgid))
+        scheduler.add_job(Runjobs,args=[prgid], trigger='cron', day_of_week=dow, hour=hour, minute=min, id=str(prgid))
     except ConflictingIdError as ex:
         print("Please delete the Program and re-added it")
+
+
 
 def remprogram(prgid):
     try:
@@ -34,6 +36,8 @@ def remprogram(prgid):
         print("There is no Job with that id")
     except Exception as ex:
         traceback.print_exc()
+
+
 
 @schedule_app.route('/scheduleTime', methods=['POST'])
 def schedule_by_time():
@@ -51,6 +55,8 @@ def schedule_by_time():
     return "job details: %s" % ex , 200
 
 
+
+
 @schedule_app.route('/listProgram', methods=['GET'])
 def schedule_list():
     try:
@@ -62,6 +68,8 @@ def schedule_list():
             traceback.print_exc()
 
     return "Welcome! %s" % jsonify(request.json)
+
+
 
 @schedule_app.route('/getProgram', methods=['POST'])
 def schedule_getprogram():
@@ -75,31 +83,49 @@ def schedule_getprogram():
     return "Welcome!"
 
 
+
+
 @schedule_app.route('/scheduleProgram', methods=['POST'])
 def schedule_program():
     try:
         data = request.get_json()
+        jobd = '{' + data.get('jobdetails') + '}'
+        pjobd = json.loads(jobd)
+        schedaoobj = Programcurd()
+        schedaoobj.updateProgramdetails(data.get('prgid'),**pjobd)
         addprogram(data.get('prgid'), data.get('day_of_week'), str(int(data.get('hour'))), str(int(data.get('minute'))))
     except Exception as ex:
         traceback.print_exc()
     return "job details: %s" % data.get('prgid') , 200
+    #return "job details:"
+
+
 
 @schedule_app.route('/updateProgram', methods=['POST'])
 def schedule_updateprogram():
     try:
         data = request.get_json()
+        jobd = '{' + data.get('jobdetails') + '}'
+        pjobd = json.loads(jobd)
+        schedaoobj = Programcurd()
         remprogram(data.get('prgid'))
+        schedaoobj.updateProgramdetails(data.get('prgid'),**pjobd)
         addprogram(data.get('prgid'), data.get('day_of_week'), str(int(data.get('hour'))), str(int(data.get('minute'))))
     except Exception as ex:
         traceback.print_exc()
 
     return "job details: %s" % data.get('prgid') , 200
 
+
+
 @schedule_app.route('/removeProgram', methods=['POST'])
 def schedule_removeprogram():
     try:
         data = request.get_json()
+        pjobd = { "":""}
+        schedaoobj = Programcurd()
         remprogram(data.get('prgid'))
+        schedaoobj.updateProgramdetails(data.get('prgid'),**pjobd)
     except Exception as ex:
         traceback.print_exc()
     return "Welcome! %s" % jsonify(request.json)
