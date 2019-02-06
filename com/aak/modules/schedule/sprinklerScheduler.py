@@ -80,8 +80,9 @@ def schedule_getprogram():
         jobd = schedaoobj.getProgramdetails(int(data.get('prgid')))
         print("name: %s, id: %s, trigger: %s, next run: %s, handler: %s, argument: %s, Job Details: %s" % (
             job.name, job.id, job.trigger, job.next_run_time, job.func, job.args, jobd))
-    except Exception as ex:
-            traceback.print_exc()
+    except AttributeError as ex:
+            print("Getting none rows")
+            #traceback.print_exc()
     return "Welcome!"
 
 
@@ -114,6 +115,7 @@ def schedule_updateprogram():
         schedaoobj.updateProgramdetails(data.get('prgid'),**pjobd)
         addprogram(data.get('prgid'), data.get('day_of_week'), str(int(data.get('hour'))), str(int(data.get('minute'))))
     except Exception as ex:
+        print("Getting none rows")
         traceback.print_exc()
 
     return "job details: %s" % data.get('prgid') , 200
