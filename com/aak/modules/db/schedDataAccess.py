@@ -11,12 +11,15 @@ class Programcurd(object):
         self.DBSession = sessionmaker(bind=self.engine)
 
     def getProgramdetails(self,id):
-        session = self.DBSession()
-        self.sdata = {}
-        self.job = session.query(Schedule).filter(Schedule.id == id).one()
-        self.sdata = self.job.Job_details.replace("'", "\"")
-        self.sdata = json.loads(self.sdata)
-        return self.sdata
+        try:
+            session = self.DBSession()
+            self.sdata = {}
+            self.job = session.query(Schedule).filter(Schedule.id == id).one()
+            self.sdata = self.job.Job_details.replace("'", "\"")
+            self.sdata = json.loads(self.sdata)
+            return self.sdata
+        except Exception as ex:
+            traceback.print_exc()
 
     def updateProgramdetails(self,id, **jd):
         try:

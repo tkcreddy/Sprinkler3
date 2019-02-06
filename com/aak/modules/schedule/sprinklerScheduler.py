@@ -76,8 +76,10 @@ def schedule_getprogram():
     try:
         data = request.get_json()
         job = scheduler.get_job(data.get('prgid'))
-        print("name: %s, id: %s, trigger: %s, next run: %s, handler: %s, argument: %s" % (
-            job.name, job.id, job.trigger, job.next_run_time, job.func, job.args))
+        schedaoobj = Programcurd()
+        jobd = schedaoobj.getProgramdetails(int(data.get('prgid')))
+        print("name: %s, id: %s, trigger: %s, next run: %s, handler: %s, argument: %s, Job Details: %s" % (
+            job.name, job.id, job.trigger, job.next_run_time, job.func, job.args, jobd))
     except Exception as ex:
             traceback.print_exc()
     return "Welcome!"
