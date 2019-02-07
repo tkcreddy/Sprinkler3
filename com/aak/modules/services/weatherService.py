@@ -69,22 +69,19 @@ class Weatherservice(object):
       return self.jobstatus
 
 
-    def wsdetails(self):
-      #print(self.zip,self.country,self.location, self.owm_appid)
-      data = owm.get_current(zip=self.location,**self.settings)
-      weather = data('weather')
-      #print(data('weather')[0]['main'])
-      #print(weather)
-      #print(data("main"))
-      if not data('weather')[0]['id'] in conditions:
-        #print("Going executing the Job")
-        #print(data('weather')[0]['id'])
-        self.jobstatus="True"
-      else:
-        print("skipping the job")
-        self.jobstatus="False"
+    def weatherDetails(self):
+        #print(self.zip,self.country,self.location, self.owm_appid)
+        data = owm.get_current(zip=self.location,**self.settings)
+        #weather = data('weather')
+        #print(data('weather')[0]['main'])
+        self.wsdetails ={}
+        self.wsdetails = {"Condition":data('weather')[0]['main'],"Description":data('weather')[0]['description'],"temp":data('main.temp'),"temp_min":data('main.temp_min'),"temp_max":data('main.temp_max')}
+        #print(weather)
+        #print(data("main"))
+        return self.wsdetails
+
+
 #x = Weatherservice()
 
 
-#if x.getRainStatus() == "True":
-#  print("execute Job")
+#print(x.weatherDetails())
