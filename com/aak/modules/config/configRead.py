@@ -3,7 +3,8 @@ import os
 class Configread():
 
     def __init__(self):
-        self.config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),'CONFIG.cfg')
+        BASE_PATH = '../config'
+        self.config_path = os.path.join(BASE_PATH,'CONFIG.cfg')
         self.config = jsoncfg.load_config(self.config_path)
 
     def GPIO(self,zone):
