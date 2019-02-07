@@ -64,15 +64,14 @@ class Weatherservice(object):
     def getRainStatus(self):
           data = owm.get_current(zip=self.location,**self.settings)
           if not data('weather')[0]['id'] in conditions:
-                self.jobstatus="True"
+                self.jobstatus="False"
           else:
                 print("skipping the job")
-                self.jobstatus="False"
+                self.jobstatus="True"
           return self.jobstatus
 
 
     def weatherDetails(self):
-            #print(self.zip,self.country,self.location, self.owm_appid)
             data = owm.get_current(zip=self.location,**self.settings)
             #weather = data('weather')
             #print(data('weather')[0]['main'])

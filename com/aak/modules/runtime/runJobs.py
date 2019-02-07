@@ -11,7 +11,7 @@ class Runjobs():
         self.raincheck = Weatherservice()
         self.rainstatus = self.raincheck.getRainStatus()
         try:
-            if self.rainstatus == "True":
+            if self.rainstatus == "False":
                 for key, value in self.jobs_hash.items():
                     Runzonejob(key,value)
 

@@ -15,7 +15,3 @@ class Schedreset(object):
             if i != 0:
                 jbdetails = {}
                 self.Da.updateProgramdetails(i,**jbdetails)'''
-
-
-#Schedreset()
-#x.reset()
