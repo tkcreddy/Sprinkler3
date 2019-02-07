@@ -27,9 +27,7 @@ class Programcurd(object):
             session = self.DBSession()
             self.job = session.query(Schedule).filter(Schedule.id == id).one()
             self.jd = jd
-            #print(self.job.Job_details)
             self.job.Job_details = str(self.jd)
-            #print(self.job.Job_details)
             session.commit()
         except Exception as ex:
             traceback.print_exc()
