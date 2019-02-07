@@ -51,34 +51,34 @@ conditions = {200: 'thunderstorm with light rain',
 class Weatherservice(object):
 
     def __init__(self):
-      self.getconfig = Configpersonalization()
-      self.zip = str(self.getconfig.zip())
-      self.country = self.getconfig.country()
-      self.location = self.zip + "," + self.country
-      self.owm_appid = self.getconfig.owm_appid()
-      self.settings = {"units": "imperial", "lang": "US", "APPID": self.owm_appid}
+          self.getconfig = Configpersonalization()
+          self.zip = str(self.getconfig.zip())
+          self.country = self.getconfig.country()
+          self.location = self.zip + "," + self.country
+          self.owm_appid = self.getconfig.owm_appid()
+          self.settings = {"units": "imperial", "lang": "US", "APPID": self.owm_appid}
 
 
     def getRainStatus(self):
-      data = owm.get_current(zip=self.location,**self.settings)
-      if not data('weather')[0]['id'] in conditions:
-        self.jobstatus="True"
-      else:
-        print("skipping the job")
-        self.jobstatus="False"
-      return self.jobstatus
+          data = owm.get_current(zip=self.location,**self.settings)
+          if not data('weather')[0]['id'] in conditions:
+                self.jobstatus="True"
+          else:
+                print("skipping the job")
+                self.jobstatus="False"
+          return self.jobstatus
 
 
     def weatherDetails(self):
-        #print(self.zip,self.country,self.location, self.owm_appid)
-        data = owm.get_current(zip=self.location,**self.settings)
-        #weather = data('weather')
-        #print(data('weather')[0]['main'])
-        self.wsdetails ={}
-        self.wsdetails = {"Condition":data('weather')[0]['main'],"Description":data('weather')[0]['description'],"temp":data('main.temp'),"temp_min":data('main.temp_min'),"temp_max":data('main.temp_max')}
-        #print(weather)
-        #print(data("main"))
-        return self.wsdetails
+            #print(self.zip,self.country,self.location, self.owm_appid)
+            data = owm.get_current(zip=self.location,**self.settings)
+            #weather = data('weather')
+            #print(data('weather')[0]['main'])
+            self.wsdetails ={}
+            self.wsdetails = {"Condition":data('weather')[0]['main'],"Description":data('weather')[0]['description'],"temp":data('main.temp'),"temp_min":data('main.temp_min'),"temp_max":data('main.temp_max')}
+            #print(weather)
+            #print(data("main"))
+            return self.wsdetails
 
 
 #x = Weatherservice()
