@@ -16,13 +16,14 @@ class Configread():
         self.num_zones = self.config.num_of_zones()
         return self.num_zones
 
-    def scheddb_loc(self):
-        self.scheddb_loc = self.config.schedule_db()
-        return self.scheddb_loc
+    def db_loc(self):
+        self.db_loc = self.config.db()
+        return self.db_loc
 
-    def numprograms(self):
-        self.num_of_program = self.config.num_of_progams()
-        return self.num_of_programs
+    def num_programs(self):
+        self.num_programs = self.config.num_of_progams()
+        return self.num_programs
+
 
     def list(self):
         self.gpiolist = {}

@@ -11,7 +11,7 @@ class Dbdao():
     def __init__(self):
         BASE_PATH = '../db'
         self.getConfig = Configread()
-        self.sql_loc = os.path.join(BASE_PATH, self.getConfig.scheddb_loc())
+        self.sql_loc = os.path.join(BASE_PATH, self.getConfig.db_loc())
 
     def Getsql_loc(self):
         pass

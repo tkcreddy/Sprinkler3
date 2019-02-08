@@ -14,7 +14,7 @@ BASE_PATH = '../db'
 
 schedule_app = Flask(__name__)
 getConfig = Configread()
-sql_loc = os.path.join(BASE_PATH, getConfig.scheddb_loc())
+sql_loc = os.path.join(BASE_PATH, getConfig.db_loc())
 scheduler = BackgroundScheduler()
 scheduler.add_jobstore('sqlalchemy', url='sqlite:///'+ sql_loc)
 scheduler.start()

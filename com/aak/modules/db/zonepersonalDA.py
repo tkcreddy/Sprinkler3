@@ -40,15 +40,15 @@ class Zonecurd(object):
             session.close()
 
 
-x = Zonecurd()
+#x = Zonecurd()
 
 
 #dic = {"3" : 200}
 
-x.updateZonedetails(2, 'Test zone')
+#x.updateZonedetails(2, 'Test zone')
 
-y = Zonecurd()
-print(y.getZonedetails(2))
+#y = Zonecurd()
+#print(y.getZonedetails(2))
 
 #for k, v in d.items():
 #    print("Zone is {} and Time is {} ".format(k, v))
