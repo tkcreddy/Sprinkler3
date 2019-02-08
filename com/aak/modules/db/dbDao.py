@@ -7,7 +7,7 @@ import os
 from com.aak.modules.config.configRead import Configread
 
 Base = declarative_base()
-class schedDao():
+class Dbdao():
     def __init__(self):
         BASE_PATH = '../db'
         self.getConfig = Configread()
@@ -27,6 +27,21 @@ class Schedule(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(20), nullable=False)
     Job_details = Column(String(250), nullable=False)
+
+
+class Pernonalized(Base):
+    __tablename__ = 'personal_table'
+    id = Column(Integer, primary_key=True)
+    name = Column(String(20), nullable=True)
+    email = Column(String(30), nullable=True)
+    zip = Column(String(10),nullable=True)
+    owm_appid = Column(String(30),nullable=True)
+
+class Zonepersonal(Base):
+    __tablename__='zone_table'
+    id = Column(Integer, primary_key=True)
+    name = Column(String(20), nullable=True)
+
 
 
 
