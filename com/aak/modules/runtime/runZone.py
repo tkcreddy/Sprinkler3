@@ -25,7 +25,11 @@ class Runzonejob():
 
             GPIO.setup(gpioid, GPIO.OUT)
             time.sleep(self.num_secs)
-            print("Zone {} job done".format(self.zone))
+            if self.zname == '':
+                print("Zone {} job done".format(self.zone))
+            else:
+                print("{} job done".format(self.zname))
+
 
         except Exception as ex:
             traceback.print_exc()

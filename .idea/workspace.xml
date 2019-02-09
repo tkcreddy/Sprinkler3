@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1efe2753-907e-4970-97ec-8140e201d805" name="Default Changelist" comment="Personalized data used in other classes">
+    <list default="true" id="1efe2753-907e-4970-97ec-8140e201d805" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/aak/modules/runtime/runZone.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/runtime/runZone.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,22 +16,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-61">
-              <caret line="162" column="12" lean-forward="true" selection-start-line="162" selection-start-column="12" selection-end-line="162" selection-end-column="12" />
+            <state relative-caret-position="1509">
+              <caret line="172" column="8" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/aak/modules/config/configPersonalization.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,7 +76,6 @@
         <option value="$PROJECT_DIR$/com/aak/modules/schedule/schedSlave.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/schedule/schedWorker.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/schedule/testFA.py" />
-        <option value="$PROJECT_DIR$/com/aak/modules/runtime/runZone.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/schedDao.py" />
         <option value="$PROJECT_DIR$/weather1.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/config/configPersonalization.py" />
@@ -109,6 +96,7 @@
         <option value="$PROJECT_DIR$/com/aak/modules/db/personalDA.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/services/weatherService.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" />
+        <option value="$PROJECT_DIR$/com/aak/modules/runtime/runZone.py" />
       </list>
     </option>
   </component>
@@ -155,7 +143,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="aak" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="runtime" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -526,7 +514,21 @@
       <option name="project" value="LOCAL" />
       <updated>1549703634465</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="update zone info and get zone info methods.">
+      <created>1549750591298</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1549750591298</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Run Zone update with zone names.">
+      <created>1549751899134</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1549751899134</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -555,8 +557,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Changes to runzone job" />
-    <MESSAGE value="Add new DB package" />
     <MESSAGE value="Fixed new files" />
     <MESSAGE value="Scheduler Reset to DB and reinitialize sched.db" />
     <MESSAGE value="added Flask scheduler frame work and sprinkerScheduler built on top of it." />
@@ -580,7 +580,9 @@
     <MESSAGE value="reset DB." />
     <MESSAGE value="Created new Class to input Personalized data through this DA" />
     <MESSAGE value="Personalized data used in other classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Personalized data used in other classes" />
+    <MESSAGE value="update zone info and get zone info methods." />
+    <MESSAGE value="Run Zone update with zone names." />
+    <option name="LAST_COMMIT_MESSAGE" value="Run Zone update with zone names." />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -677,16 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7817">
           <caret line="1798" selection-start-line="1798" selection-end-line="1798" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/runZone.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -829,10 +821,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/runZone.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-61">
-          <caret line="162" column="12" lean-forward="true" selection-start-line="162" selection-start-column="12" selection-end-line="162" selection-end-column="12" />
+        <state relative-caret-position="1509">
+          <caret line="172" column="8" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
