@@ -17,7 +17,7 @@ class Schedreset(object):
 class Personalreset(object):
     def __init__(self):
         self.Da = Personalcurd()
-        self.Da.updatePersonaldetails('','','','')
+        self.Da.updatePersonaldetails('','','','','')
 
 class Zonereset(object):
     def __init__(self):

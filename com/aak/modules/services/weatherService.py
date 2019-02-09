@@ -1,5 +1,6 @@
 import openweathermapy.core as owm
 from com.aak.modules.config.configPersonalization import Configpersonalization
+from com.aak.modules.db.personalDA import Personalcurd
 import traceback
 
 conditions = {200: 'thunderstorm with light rain',
@@ -53,11 +54,12 @@ conditions = {200: 'thunderstorm with light rain',
 class Weatherservice(object):
 
     def __init__(self):
-          self.getconfig = Configpersonalization()
-          self.zip = str(self.getconfig.zip())
-          self.country = self.getconfig.country()
+          self.getconfig = Personalcurd()
+          self.name, self.email, self.zip, self.country, self.owm_appid = self.getconfig.getPersonaldetails()
+          #self.zip = str(self.getconfig.zip())
+          #self.country = self.getconfig.country()
           self.location = self.zip + "," + self.country
-          self.owm_appid = self.getconfig.owm_appid()
+          #self.owm_appid = self.getconfig.owm_appid()
           self.settings = {"units": "imperial", "lang": "US", "APPID": self.owm_appid}
 
 

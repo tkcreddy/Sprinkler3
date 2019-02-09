@@ -35,6 +35,7 @@ class Pernonalized(Base):
     name = Column(String(20), nullable=True)
     email = Column(String(30), nullable=True)
     zip = Column(String(10),nullable=True)
+    country = Column(String(5),nullable=True)
     owm_appid = Column(String(30),nullable=True)
 
 class Zonepersonal(Base):

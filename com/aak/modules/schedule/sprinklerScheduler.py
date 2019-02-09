@@ -5,6 +5,7 @@ from datetime import datetime
 from com.aak.modules.runtime.runJobs import Runjobs
 from com.aak.modules.config.configRead import Configread
 from com.aak.modules.db.schedDataAccess import Programcurd
+from com.aak.modules.db.personalDA import Personalcurd
 import traceback
 import os
 import json
@@ -133,6 +134,36 @@ def schedule_removeprogram():
     except Exception as ex:
         traceback.print_exc()
     return "Welcome! %s" % jsonify(request.json)
+
+
+@schedule_app.route('/personalUpdate', methods=['POST'])
+def schedule_personalUpdate():
+    try:
+        data = request.get_json()
+        personalObject = Personalcurd()
+        personalObject.updatePersonaldetails(data.get('name'),data.get('email'),data.get('zip'),data.get('country'),data.get('owm_appid'))
+    except Exception as ex:
+        pass
+        traceback.print_exc()
+    return  "Personal details update"
+
+@schedule_app.route('/getPersonal', methods=['GET'])
+def schedule_getPersonal():
+    try:
+        #data = request.get_json()
+        personalObject = Personalcurd()
+        #personalObject.getPersonaldetails()
+        name, email, zip, country, owm_appid = personalObject.getPersonaldetails()
+        #print(personalObject.getPersonaldetails())
+        print(name,email,zip,country,owm_appid)
+    except Exception as ex:
+        pass
+        traceback.print_exc()
+    return  "Personal details update"
+
+
+
+
 
 
 schedule_app.run(host='0.0.0.0', port=12345)

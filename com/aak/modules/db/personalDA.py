@@ -19,8 +19,9 @@ class Personalcurd(object):
             self.name = self.personal.name
             self.email = self.personal.email
             self.zip = self.personal.zip
+            self.country = self.personal.country
             self.owm_appid = self.personal.owm_appid
-            return self.name,self.email,self.zip,self.owm_appid
+            return self.name,self.email,self.zip,self.country,self.owm_appid
         except exc.NoResultFound:
             pass
             #print("No rows")
@@ -28,7 +29,7 @@ class Personalcurd(object):
         finally:
             session.close()
 
-    def updatePersonaldetails(self,name,email,zip,owm_appid):
+    def updatePersonaldetails(self,name,email,zip,country,owm_appid):
         try:
             self.name = ''
             session = self.DBSession()
@@ -37,6 +38,7 @@ class Personalcurd(object):
             self.personal.name = str(self.name)
             self.personal.email = str(email)
             self.personal.zip = str(zip)
+            self.personal.country = str(country)
             self.personal.owm_appid = str(owm_appid)
         except exc.NoResultFound:
             #traceback.print_exc()
@@ -47,7 +49,7 @@ class Personalcurd(object):
             session.close()
 
 
-x = Personalcurd()
+#x = Personalcurd()
 
 
 #dic = {"3" : 200}
