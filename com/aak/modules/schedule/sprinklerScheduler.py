@@ -6,6 +6,7 @@ from com.aak.modules.runtime.runJobs import Runjobs
 from com.aak.modules.config.configRead import Configread
 from com.aak.modules.db.schedDataAccess import Programcurd
 from com.aak.modules.db.personalDA import Personalcurd
+from com.aak.modules.db.zonepersonalDA import Zonecurd
 import traceback
 import os
 import json
@@ -147,6 +148,8 @@ def schedule_personalUpdate():
         traceback.print_exc()
     return  "Personal details update"
 
+
+
 @schedule_app.route('/getPersonal', methods=['GET'])
 def schedule_getPersonal():
     try:
@@ -162,8 +165,30 @@ def schedule_getPersonal():
     return  "Personal details update"
 
 
+@schedule_app.route('/zoneinfoUpdate', methods=['POST'])
+def schedule_zoneinfoUpdate():
+    try:
+        data = request.get_json()
+        zoneinfoObject = Zonecurd()
+        #zoneinfoObject.updateZonedetails()
+        zoneinfoObject.updateZonedetails(data.get('id'),data.get('zname'))
+    except Exception as ex:
+        pass
+        traceback.print_exc()
+    return  "Personal details update"
 
-
-
+@schedule_app.route('/getZoneinfo', methods=['GET'])
+def schedule_getZoneinfo():
+    try:
+        data = request.get_json()
+        zoneinfoObject = Zonecurd()
+        #personalObject.getPersonaldetails()
+        name = zoneinfoObject.getZonedetails(data.get('id'))
+        #print(personalObject.getPersonaldetails())
+        print(data.get('id'),name)
+    except Exception as ex:
+        pass
+        traceback.print_exc()
+    return  "Personal details update"
 
 schedule_app.run(host='0.0.0.0', port=12345)
