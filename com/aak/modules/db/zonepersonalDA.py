@@ -39,7 +39,20 @@ class Zonecurd(object):
             session.commit()
             session.close()
 
+    def listAllzones(self):
+        try:
+            session = self.DBSession()
+            self.list = {}
+            self.results = session.query(Zonepersonal).all()
 
+        except exc.NoResultFound:
+            traceback.print_exc()
+
+        finally:
+            #session.commit()
+            #print(self.list)
+            return self.results
+            session.close()
 #x = Zonecurd()
 
 

@@ -175,20 +175,31 @@ def schedule_zoneinfoUpdate():
     except Exception as ex:
         pass
         traceback.print_exc()
-    return  "Personal details update"
+    return  "zone details update"
 
 @schedule_app.route('/getZoneinfo', methods=['GET'])
 def schedule_getZoneinfo():
     try:
         data = request.get_json()
         zoneinfoObject = Zonecurd()
-        #personalObject.getPersonaldetails()
         name = zoneinfoObject.getZonedetails(data.get('id'))
-        #print(personalObject.getPersonaldetails())
         print(data.get('id'),name)
     except Exception as ex:
         pass
         traceback.print_exc()
-    return  "Personal details update"
+    return  "Zone details Get"
+
+
+@schedule_app.route('/getZonelist', methods=['GET'])
+def schedule_getZonelist():
+    try:
+        zoneinfoObject = Zonecurd()
+        lists = zoneinfoObject.listAllzones()
+        for list in lists:
+            print(list.id , list.name)
+    except Exception as ex:
+        pass
+        traceback.print_exc()
+    return  "Zone list details"
 
 schedule_app.run(host='0.0.0.0', port=12345)
