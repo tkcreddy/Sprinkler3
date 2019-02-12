@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sprinkler System</title>
+</head>
+<body>
+<link href="static/style.css" rel="stylesheet">
+<style>
+body {
+background-color: black;
+font-color: white;
+}
+
+h4 {
+  color: white;
+   font-family: cursive;
+   font-style: italic;
+}
+
+h5 {
+    color: white;
+    }
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: rightheader; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header rightheader rightheader'
+    'menu main main main main main'
+    'menu footer footer footer footer footer';
+  grid-gap: 1px;
+  padding: 0px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 1px 0;
+  font-size: 30px;
+}
+</style>
+
+<div class="grid-container">
+    <div class="item1"><img align="left" height="100" src="static/Sprinkler.png" width="300"><h4 align="left"> Welcome to Sprinkler Project</h4></div>
+   <div class="item4"><h5>Right</h5></div>
+    <div class="item2"><h5>menu</h5></div>
+  <div class="item3"><h5>Main</h5></div>
+
+  <div class="item5"><h5>Footer</h5></div>
+</div>
+
+</body>
+</html>
