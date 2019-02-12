@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1efe2753-907e-4970-97ec-8140e201d805" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/com/aak/modules/schedule/static/Sprinkler.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/aak/modules/schedule/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/aak/modules/schedule/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/aak/modules/runtime/runZone.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/runtime/runZone.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/aak/modules/services/weatherService.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/services/weatherService.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,13 +17,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1509">
-              <caret line="172" column="8" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
+            <state relative-caret-position="-1784">
+              <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/static/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/aak/modules/services/weatherService.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -31,6 +65,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -46,10 +81,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/com/aak/modules/config/testmain.py" />
-        <option value="$PROJECT_DIR$/com/aak/modules/config/testone.py" />
-        <option value="$PROJECT_DIR$/com/NewMain.py" />
-        <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/testone.py" />
         <option value="$PROJECT_DIR$/NewMain.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/runtime/rungpiojob.py" />
@@ -87,16 +118,20 @@
         <option value="$PROJECT_DIR$/com/aak/modules/db/DBDao.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/schedReset.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/schedDataAccess.py" />
-        <option value="$PROJECT_DIR$/com/aak/modules/db/zonepersonalDA.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/config/CONFIG.cfg" />
         <option value="$PROJECT_DIR$/com/aak/modules/config/resetPersonalization.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/config/configRead.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/dbDao.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/resetDb.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/personalDA.py" />
-        <option value="$PROJECT_DIR$/com/aak/modules/services/weatherService.py" />
-        <option value="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/runtime/runZone.py" />
+        <option value="$PROJECT_DIR$/com/aak/modules/db/zonepersonalDA.py" />
+        <option value="$PROJECT_DIR$/com/aak/modules/UI/index.html" />
+        <option value="$PROJECT_DIR$/com/aak/modules/UI/style.css" />
+        <option value="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" />
+        <option value="$PROJECT_DIR$/com/aak/modules/services/weatherService.py" />
+        <option value="$PROJECT_DIR$/com/aak/modules/schedule/static/style.css" />
+        <option value="$PROJECT_DIR$/com/aak/modules/schedule/templates/index.html" />
       </list>
     </option>
   </component>
@@ -143,7 +178,25 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="aak" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="runtime" type="462c0819:PsiDirectoryNode" />
+              <item name="schedule" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sprinkler3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sprinkler3" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aak" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="schedule" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sprinkler3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sprinkler3" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aak" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="schedule" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -152,16 +205,17 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="diff.base" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/com/aak/modules/config/testone.py" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/com/aak/modules/schedule/static" />
+      <recent name="$PROJECT_DIR$/com/aak/modules/schedule" />
+      <recent name="$PROJECT_DIR$/com/aak/modules/schedule/templates" />
       <recent name="$PROJECT_DIR$/com/aak/modules/services" />
       <recent name="$PROJECT_DIR$/com/aak/modules/schedule/scripts" />
-      <recent name="$PROJECT_DIR$/com/aak/modules/schedule" />
-      <recent name="$PROJECT_DIR$/com/aak/modules/db" />
-      <recent name="$PROJECT_DIR$/" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -219,13 +273,36 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="weatherService" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Sprinkler3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/aak/modules/services" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/aak/modules/services/weatherService.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.sprinklerScheduler" />
       <item itemvalue="Python.weather" />
+      <item itemvalue="Python.weatherService" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.sprinklerScheduler" />
+        <item itemvalue="Python.weatherService" />
         <item itemvalue="Python.weather" />
       </list>
     </recent_temporary>
@@ -528,7 +605,21 @@
       <option name="project" value="LOCAL" />
       <updated>1549751899134</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Run Zone update with zone names.">
+      <created>1549754622455</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1549754622455</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Get zone list and added Zone list object.">
+      <created>1549836511338</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1549836511338</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -557,7 +648,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Fixed new files" />
     <MESSAGE value="Scheduler Reset to DB and reinitialize sched.db" />
     <MESSAGE value="added Flask scheduler frame work and sprinkerScheduler built on top of it." />
     <MESSAGE value="updated SchedDao and Sprinklescheduler files." />
@@ -582,7 +672,8 @@
     <MESSAGE value="Personalized data used in other classes" />
     <MESSAGE value="update zone info and get zone info methods." />
     <MESSAGE value="Run Zone update with zone names." />
-    <option name="LAST_COMMIT_MESSAGE" value="Run Zone update with zone names." />
+    <MESSAGE value="Get zone list and added Zone list object." />
+    <option name="LAST_COMMIT_MESSAGE" value="Get zone list and added Zone list object." />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -709,23 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/db/schedDataAccess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/db/zonepersonalDA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/aak/modules/config/CONFIG.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -757,16 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/db/resetDb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/aak/modules/config/Personal_config.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -791,26 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/services/weatherService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="50" column="21" lean-forward="true" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/db/personalDA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/aak/modules/config/configPersonalization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -831,13 +875,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/db/zonepersonalDA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="47" column="33" lean-forward="true" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/db/schedDataAccess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/db/personalDA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/db/resetDb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1509">
-          <caret line="172" column="8" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
+        <state relative-caret-position="-1784">
+          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/services/weatherService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/static/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>

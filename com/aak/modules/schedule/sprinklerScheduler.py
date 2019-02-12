@@ -7,6 +7,7 @@ from com.aak.modules.config.configRead import Configread
 from com.aak.modules.db.schedDataAccess import Programcurd
 from com.aak.modules.db.personalDA import Personalcurd
 from com.aak.modules.db.zonepersonalDA import Zonecurd
+from flask import render_template
 import traceback
 import os
 import json
@@ -39,6 +40,9 @@ def remprogram(prgid):
     except Exception as ex:
         traceback.print_exc()
 
+@schedule_app.route('/', methods=['GET'])
+def index():
+   return render_template("index.html")
 
 
 @schedule_app.route('/scheduleTime', methods=['POST'])
