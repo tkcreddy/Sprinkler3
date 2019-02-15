@@ -56,7 +56,7 @@ class Userscurd(object):
             session = self.DBSession()
             self.hash = pbkdf2_sha256.encrypt(password, rounds=200000, salt_size=16)
             self.userdata = session.query(Users).filter(Users.username == username).one()
-            print(pbkdf2_sha256.verify(password, self.userdata.password))
+            return pbkdf2_sha256.verify(password, self.userdata.password)
 
         except exc.NoResultFound:
             print("No user found.")
@@ -69,8 +69,9 @@ class Userscurd(object):
         try:
             if self.checkAuthentication(username,password):
                 session = self.DBSession()
+                self.hash = pbkdf2_sha256.encrypt(newpassword, rounds=200000, salt_size=16)
                 self.userdata = session.query(Users).filter(Users.username == username).one()
-                self.userdata.password = newpassword
+                self.userdata.password = self.hash
 
 
         except exc.NoResultFound:
