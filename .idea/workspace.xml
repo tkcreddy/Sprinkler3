@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1efe2753-907e-4970-97ec-8140e201d805" name="Default Changelist" comment="index.html">
-      <change afterPath="$PROJECT_DIR$/com/aak/modules/services/userAuthenticationcheck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/aak/modules/db/userauthDA.py" beforeDir="false" />
+    <list default="true" id="1efe2753-907e-4970-97ec-8140e201d805" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/com/aak/modules/db/userDA.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/db/userDA.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +24,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/aak/modules/db/dbDao.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
@@ -34,6 +32,36 @@
               <folding>
                 <element signature="e#0#69#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/aak/modules/services/userAuthenticationcheck.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/com/aak/modules/db/userDA.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="82" column="34" lean-forward="true" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/passlib/utils/handlers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="756" selection-start-line="756" selection-end-line="756" />
             </state>
           </provider>
         </entry>
@@ -105,11 +133,11 @@
         <option value="$PROJECT_DIR$/com/aak/modules/services/weatherService.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/schedule/templates/login.html" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/userauthDA.py" />
-        <option value="$PROJECT_DIR$/com/aak/modules/services/userAuthenticationcheck.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/config/resetPersonalization.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/resetDb.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/dbDao.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/personalDA.py" />
+        <option value="$PROJECT_DIR$/com/aak/modules/services/userAuthenticationcheck.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/userDA.py" />
       </list>
     </option>
@@ -167,6 +195,14 @@
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Sprinkler3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sprinkler3" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aak" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -199,7 +235,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.resetPersonalization">
+  <component name="RunManager" selected="Python.userAuthenticationcheck">
     <configuration name="resetPersonalization" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Sprinkler3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -263,62 +299,16 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="userDA" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Sprinkler3" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/aak/modules/db" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/aak/modules/db/userDA.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="weatherService" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Sprinkler3" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/aak/modules/services" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/aak/modules/services/weatherService.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.sprinklerScheduler" />
-      <item itemvalue="Python.weatherService" />
       <item itemvalue="Python.userAuthenticationcheck" />
       <item itemvalue="Python.resetPersonalization" />
-      <item itemvalue="Python.userDA" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.resetPersonalization" />
-        <item itemvalue="Python.userDA" />
         <item itemvalue="Python.userAuthenticationcheck" />
+        <item itemvalue="Python.resetPersonalization" />
         <item itemvalue="Python.sprinklerScheduler" />
-        <item itemvalue="Python.weatherService" />
       </list>
     </recent_temporary>
   </component>
@@ -332,20 +322,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546471788550</updated>
-    </task>
-    <task id="LOCAL-00007" summary="update few lines of exceptional handling">
-      <created>1548458403384</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1548458403384</updated>
-    </task>
-    <task id="LOCAL-00008" summary="minor changes">
-      <created>1548478138589</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1548478138589</updated>
     </task>
     <task id="LOCAL-00009" summary="minor changes">
       <created>1548541907065</created>
@@ -676,11 +652,26 @@
       <option name="project" value="LOCAL" />
       <updated>1550263977995</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="rename">
+      <created>1550264068972</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1550264068972</updated>
+    </task>
+    <task id="LOCAL-00057" summary="fixed the user profile DA in update password selection where it was not converting to hash before storing.">
+      <created>1550265563322</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1550265563322</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="816" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -726,8 +717,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="update the File with Weather check to see if the Rain is the forecast." />
-    <MESSAGE value="Adding the new weather service file to check weather forecast and weatherdetails" />
     <MESSAGE value="Adding the personalization config read file for reading all Location specific, Openweathermap appid and other details." />
     <MESSAGE value="Added weather details method" />
     <MESSAGE value="Adding the new weather service file" />
@@ -751,7 +740,9 @@
     <MESSAGE value="Added new default user and password reset module." />
     <MESSAGE value="fixed the spelling mistake in Personalized class from &quot;Pernonalized&quot; to &quot;Personalized&quot;" />
     <MESSAGE value="fixed the Personalized class spelling called from dbDao class." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed the Personalized class spelling called from dbDao class." />
+    <MESSAGE value="rename" />
+    <MESSAGE value="fixed the user profile DA in update password selection where it was not converting to hash before storing." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed the user profile DA in update password selection where it was not converting to hash before storing." />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -920,13 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/services/userAuthenticationcheck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
@@ -963,16 +947,6 @@
           <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/db/userDA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1031,6 +1005,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/db/dbDao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/passlib/utils/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="756" selection-start-line="756" selection-end-line="756" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/com/aak/modules/config/resetPersonalization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1041,12 +1032,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/db/dbDao.py">
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/services/userAuthenticationcheck.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        <state relative-caret-position="75">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/db/userDA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="82" column="34" lean-forward="true" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
           <folding>
-            <element signature="e#0#69#0" expanded="true" />
+            <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
