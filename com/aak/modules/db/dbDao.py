@@ -45,8 +45,9 @@ class Zonepersonal(Base):
 
 class Users(Base):
     __tablename__='user_table'
-    user=Column(String(20,primary_key=True))
-    password=Column(String(256),nullable=False)
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    username = Column(String(20), nullable=False, unique=True)
+    password = Column(String,nullable=False)
 
 
 
