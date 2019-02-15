@@ -72,6 +72,9 @@ class Userscurd(object):
                 self.hash = pbkdf2_sha256.encrypt(newpassword, rounds=200000, salt_size=16)
                 self.userdata = session.query(Users).filter(Users.username == username).one()
                 self.userdata.password = self.hash
+                self.returnvalue = 1
+            else:
+                self.returnvalue = 2
 
 
         except exc.NoResultFound:
@@ -81,3 +84,4 @@ class Userscurd(object):
         finally:
             session.commit()
             session.close()
+            return self.returnvalue
