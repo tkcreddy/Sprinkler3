@@ -63,3 +63,20 @@ class Userscurd(object):
         finally:
             session.close()
 
+
+
+    def updatepassword(self,username,password,newpassword):
+        try:
+            if self.checkAuthentication(username,password):
+                session = self.DBSession()
+                self.userdata = session.query(Users).filter(Users.username == username).one()
+                self.userdata.password = newpassword
+
+
+        except exc.NoResultFound:
+            #traceback.print_exc()
+            print("something failed")
+            #session.add(new_zone)
+        finally:
+            session.commit()
+            session.close()
