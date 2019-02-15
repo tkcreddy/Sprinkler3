@@ -29,7 +29,7 @@ class Schedule(Base):
     Job_details = Column(String(250), nullable=False)
 
 
-class Pernonalized(Base):
+class Personalized(Base):
     __tablename__ = 'personal_table'
     id = Column(Integer, primary_key=True)
     name = Column(String(20), nullable=True)
