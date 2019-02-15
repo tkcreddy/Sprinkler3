@@ -1,4 +1,4 @@
-from com.aak.modules.db.dbDao import Dbdao,Pernonalized, Base
+from com.aak.modules.db.dbDao import Dbdao,Personalized, Base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import exc
 import json
@@ -15,7 +15,7 @@ class Personalcurd(object):
         try:
             session = self.DBSession()
             self.name = ''
-            self.personal = session.query(Pernonalized).filter(Pernonalized.id == 1).one()
+            self.personal = session.query(Personalized).filter(Personalized.id == 1).one()
             self.name = self.personal.name
             self.email = self.personal.email
             self.zip = self.personal.zip
@@ -33,7 +33,7 @@ class Personalcurd(object):
         try:
             self.name = ''
             session = self.DBSession()
-            self.personal = session.query(Pernonalized).filter(Pernonalized.id == 1).one()
+            self.personal = session.query(Personalized).filter(Personalized.id == 1).one()
             self.name = name
             self.personal.name = str(self.name)
             self.personal.email = str(email)
@@ -42,7 +42,7 @@ class Personalcurd(object):
             self.personal.owm_appid = str(owm_appid)
         except exc.NoResultFound:
             #traceback.print_exc()
-            new_zone = Pernonalized(id=1, name=name,email=email,zip=zip,owm_appid=owm_appid)
+            new_zone = Personalized(id=1, name=name,email=email,zip=zip,owm_appid=owm_appid)
             session.add(new_zone)
         finally:
             session.commit()
