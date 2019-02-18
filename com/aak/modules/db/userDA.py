@@ -81,15 +81,17 @@ class Userscurd(object):
                 self.hash = pbkdf2_sha256.encrypt(newpassword, rounds=200000, salt_size=16)
                 self.userdata = self.session.query(Users).filter(Users.username == username).one()
                 self.userdata.password = self.hash
+                self.session.commit()
                 self.returnvalue = 1
             else:
                 self.returnvalue = 2
         except exc.NoResultFound:
+            self.returnvalue = 2
             #traceback.print_exc()
             print("something failed")
             #session.add(new_zone)
         finally:
-            self.session.commit()
+
             self.session.close()
             return self.returnvalue
 
@@ -101,10 +103,6 @@ class Userscurd(object):
             self.session.query(Users).filter(Users.username == username).delete()
             self.rv = True
 
-            # User.query.filter_by(id=123).delete()
-            # User.query.filter(User.id == 123).delete()
-            # self.username = self.userdata.username
-            # return self.username
         except exc.NoResultFound:
             print("No rows")
             self.rv = False

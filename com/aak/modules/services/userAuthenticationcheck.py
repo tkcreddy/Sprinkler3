@@ -3,17 +3,17 @@ from com.aak.modules.db.userDA import Userscurd
 
 x=Userscurd()
 if x.insertUser("admin1","password"):
-   print("admin user was added")
+   print("admin1 user was added")
 else:
   print("failed user")
 
-
+#
 # if x.checkAuthentication("admin","password"):
 #     print("print authentication is successfull")
 # else:
 #     print(" not valid Passsword")
 
-#x.checkAuthentication("admin","password")
+# x.checkAuthentication("admin","password")
 
 
 
