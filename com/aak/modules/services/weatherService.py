@@ -1,5 +1,4 @@
 import openweathermapy.core as owm
-from com.aak.modules.config.configPersonalization import Configpersonalization
 from com.aak.modules.db.personalDA import Personalcurd
 import traceback
 
@@ -56,10 +55,7 @@ class Weatherservice(object):
     def __init__(self):
           self.getconfig = Personalcurd()
           self.name, self.email, self.zip, self.country, self.owm_appid = self.getconfig.getPersonaldetails()
-          #self.zip = str(self.getconfig.zip())
-          #self.country = self.getconfig.country()
           self.location = self.zip + "," + self.country
-          #self.owm_appid = self.getconfig.owm_appid()
           self.settings = {"units": "imperial", "lang": "US", "APPID": self.owm_appid}
 
 
@@ -75,16 +71,6 @@ class Weatherservice(object):
 
     def weatherDetails(self):
             data = owm.get_current(zip=self.location,**self.settings)
-            #weather = data('weather')
-            #print(data('weather')[0]['main'])
             self.wsdetails ={}
             self.wsdetails = {"Condition":data('weather')[0]['main'],"Description":data('weather')[0]['description'],"temp":data('main.temp'),"temp_min":data('main.temp_min'),"temp_max":data('main.temp_max')}
-            #print(weather)
-            #print(data("main"))
             return self.wsdetails
-
-
-#x = Weatherservice()
-
-
-#print(x.weatherDetails())

@@ -50,8 +50,9 @@ class Userscurd(object):
         except sqlerr as err:
             self.session.rollback()
             if "UNIQUE constraint failed: self.username" in str(err):
+                print("print User is already there")
                 return False, "error, username already exists (%s)" % self.username
-            print("print User is already there exc", err)
+            #print("print User is already there exc", err)
             self.rv = False
 
 

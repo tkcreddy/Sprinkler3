@@ -38,7 +38,7 @@ class Personalcurd(object):
             self.personal.name = str(self.name)
             self.personal.email = str(email)
             self.personal.zip = str(zip)
-            self.personal.country = str(country)
+            self.personal.country = str(country).lower()
             self.personal.owm_appid = str(owm_appid)
         except exc.NoResultFound:
             #traceback.print_exc()
@@ -51,14 +51,8 @@ class Personalcurd(object):
 
 #x = Personalcurd()
 
-
-#dic = {"3" : 200}
-
-#x.updateZonedetails(2, 'Test zone')
-
-#y = Zonecurd()
 #print(x.getPersonaldetails())
-#x.updatePersonaldetails("Krishna Reddy","tkcreddy@yahoo.com",'92631','')
+# x.updatePersonaldetails("Krishna Reddy","tkcreddy@yahoo.com",'92630','US','e659b489ab6d9f3ad35863e451a67d6c')
 #print(x.getPersonaldetails())
 #for k, v in d.items():
 #    print("Zone is {} and Time is {} ".format(k, v))
