@@ -2,14 +2,14 @@ from com.aak.modules.db.userDA import Userscurd
 
 
 x=Userscurd()
-if x.insertUser("admin1","password"):
-   print("admin1 user was added")
-else:
-  print("failed user")
+# if x.insertUser("admin1","password"):
+#    print("admin1 user was added")
+# else:
+#   print("failed user")
 
 #
 # if x.checkAuthentication("admin","password"):
-#     print("print authentication is successfull")
+#     print("authentication is successfull")
 # else:
 #     print(" not valid Passsword")
 
@@ -24,7 +24,7 @@ else:
 
 #print(pbkdf2_sha256.verify("password", hash))
 
-#print(x.checkAuthentication("admin","password12"))
+# print(x.checkAuthentication("admin","password"))
 
 # if x.deleteUsername("admin1"):
 #     print("admin user was deleted")

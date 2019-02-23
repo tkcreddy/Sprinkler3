@@ -1,4 +1,4 @@
-from flask import Flask, request,jsonify
+from flask import Flask,jsonify,flash, redirect, render_template, request, session, abort
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.jobstores.base import *
 from datetime import datetime
@@ -7,6 +7,7 @@ from com.aak.modules.config.configRead import Configread
 from com.aak.modules.db.schedDataAccess import Programcurd
 from com.aak.modules.db.personalDA import Personalcurd
 from com.aak.modules.db.zonepersonalDA import Zonecurd
+from com.aak.modules.db.userDA import Userscurd
 from flask import render_template
 import traceback
 import os
@@ -16,6 +17,7 @@ import json
 BASE_PATH = '../db'
 
 schedule_app = Flask(__name__)
+schedule_app.secret_key = os.urandom(12)
 getConfig = Configread()
 sql_loc = os.path.join(BASE_PATH, getConfig.db_loc())
 scheduler = BackgroundScheduler()
@@ -40,10 +42,24 @@ def remprogram(prgid):
     except Exception as ex:
         traceback.print_exc()
 
+
 @schedule_app.route('/', methods=['GET'])
 def index():
-   return render_template("index.html")
+    if not session.get('logged_in'):
+        return render_template('login.html')
+    else:
+        return render_template("index.html")
 
+
+@schedule_app.route('/login', methods=['POST'])
+def do_admin_login():
+    login_auth = Userscurd()
+    if login_auth.checkAuthentication(request.form['username'],request.form['password']):
+        session['logged_in'] = True
+        return render_template('index.html')
+    else:
+        error = 'Invalid Credentials. Please try again.'
+        return render_template('login.html', error=error)
 
 @schedule_app.route('/scheduleTime', methods=['POST'])
 def schedule_by_time():
@@ -157,16 +173,15 @@ def schedule_personalUpdate():
 @schedule_app.route('/getPersonal', methods=['GET'])
 def schedule_getPersonal():
     try:
-        #data = request.get_json()
         personalObject = Personalcurd()
-        #personalObject.getPersonaldetails()
         name, email, zip, country, owm_appid = personalObject.getPersonaldetails()
-        #print(personalObject.getPersonaldetails())
-        print(name,email,zip,country,owm_appid)
+        # print(name,email,zip,country,owm_appid)
     except Exception as ex:
         pass
         traceback.print_exc()
-    return  "Personal details update"
+    finally:
+        # print(name, email, zip, country, owm_appid)
+        return  "Personal details update %s %s %s %s %s" % (str(name), str(email), str(zip), str(country), str(owm_appid))
 
 
 @schedule_app.route('/zoneinfoUpdate', methods=['POST'])
@@ -205,5 +220,6 @@ def schedule_getZonelist():
         pass
         traceback.print_exc()
     return  "Zone list details"
+
 
 schedule_app.run(host='0.0.0.0', port=12345)

@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1efe2753-907e-4970-97ec-8140e201d805" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/aak/modules/db/personalDA.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/db/personalDA.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/aak/modules/db/userDA.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/db/userDA.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/aak/modules/services/weatherService.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/services/weatherService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/aak/modules/schedule/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/schedule/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/aak/modules/services/userAuthenticationcheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/services/userAuthenticationcheck.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,19 +28,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/aak/modules/services/userAuthenticationcheck.py">
+        <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="7" selection-end-column="22" />
+            <state relative-caret-position="310">
+              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/com/aak/modules/services/weather.py">
+        <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="337">
+              <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/static/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="69" column="26" lean-forward="true" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="23" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/aak/modules/services/userAuthenticationcheck.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-start-column="2" selection-end-line="13" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -48,43 +78,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/aak/modules/db/userDA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="721">
               <caret line="50" column="35" lean-forward="true" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/aak/modules/services/weatherService.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/aak/modules/config/Personal_config.cfg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="48" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/aak/modules/db/personalDA.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#61#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,18 +148,18 @@
         <option value="$PROJECT_DIR$/com/aak/modules/db/zonepersonalDA.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/UI/index.html" />
         <option value="$PROJECT_DIR$/com/aak/modules/UI/style.css" />
-        <option value="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" />
-        <option value="$PROJECT_DIR$/com/aak/modules/schedule/static/style.css" />
-        <option value="$PROJECT_DIR$/com/aak/modules/schedule/templates/index.html" />
-        <option value="$PROJECT_DIR$/com/aak/modules/schedule/templates/login.html" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/userauthDA.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/config/resetPersonalization.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/resetDb.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/dbDao.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/userDA.py" />
-        <option value="$PROJECT_DIR$/com/aak/modules/services/userAuthenticationcheck.py" />
-        <option value="$PROJECT_DIR$/com/aak/modules/db/personalDA.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/services/weatherService.py" />
+        <option value="$PROJECT_DIR$/com/aak/modules/db/personalDA.py" />
+        <option value="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" />
+        <option value="$PROJECT_DIR$/com/aak/modules/schedule/templates/index.html" />
+        <option value="$PROJECT_DIR$/com/aak/modules/schedule/static/style.css" />
+        <option value="$PROJECT_DIR$/com/aak/modules/services/userAuthenticationcheck.py" />
+        <option value="$PROJECT_DIR$/com/aak/modules/schedule/templates/login.html" />
       </list>
     </option>
   </component>
@@ -209,7 +206,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="aak" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Sprinkler3" type="b2602c69:ProjectViewProjectNode" />
@@ -217,7 +214,25 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="aak" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="schedule" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sprinkler3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sprinkler3" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aak" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="schedule" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sprinkler3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sprinkler3" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aak" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="schedule" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Sprinkler3" type="b2602c69:ProjectViewProjectNode" />
@@ -259,8 +274,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.weather">
-    <configuration name="personalDA" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.sprinklerScheduler">
+    <configuration name="sprinklerScheduler" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Sprinkler3" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -268,32 +283,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/aak/modules/db" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/aak/modules/schedule" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/aak/modules/db/personalDA.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="resetPersonalization" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Sprinkler3" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/aak/modules/config" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/aak/modules/config/resetPersonalization.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -344,41 +338,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="weatherService" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Sprinkler3" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/aak/modules/services" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/aak/modules/services/weatherService.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Python.userAuthenticationcheck" />
-      <item itemvalue="Python.resetPersonalization" />
-      <item itemvalue="Python.weather" />
-      <item itemvalue="Python.weatherService" />
-      <item itemvalue="Python.personalDA" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.weather" />
-        <item itemvalue="Python.weatherService" />
-        <item itemvalue="Python.personalDA" />
+        <item itemvalue="Python.sprinklerScheduler" />
         <item itemvalue="Python.userAuthenticationcheck" />
-        <item itemvalue="Python.resetPersonalization" />
+        <item itemvalue="Python.weather" />
       </list>
     </recent_temporary>
   </component>
@@ -392,34 +356,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546471788550</updated>
-    </task>
-    <task id="LOCAL-00014" summary="added Flask scheduler frame work and sprinkerScheduler built on top of it.">
-      <created>1549086869201</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1549086869201</updated>
-    </task>
-    <task id="LOCAL-00015" summary="updated SchedDao and Sprinklescheduler files.">
-      <created>1549140764011</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1549140764011</updated>
-    </task>
-    <task id="LOCAL-00016" summary="updated with try and except block for better error handling">
-      <created>1549318221083</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1549318221083</updated>
-    </task>
-    <task id="LOCAL-00017" summary="updated with try and except block for better error handling">
-      <created>1549323520879</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1549323520880</updated>
     </task>
     <task id="LOCAL-00018" summary="removed unwanted lines and update new def classes.">
       <created>1549326392527</created>
@@ -736,7 +672,35 @@
       <option name="project" value="LOCAL" />
       <updated>1550450561272</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="python requirements file.">
+      <created>1550874073141</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1550874073141</updated>
+    </task>
+    <task id="LOCAL-00064" summary="change the lower in country variable.">
+      <created>1550938661458</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1550938661458</updated>
+    </task>
+    <task id="LOCAL-00065" summary="set the country to lower before sending to owm site.">
+      <created>1550938722395</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1550938722395</updated>
+    </task>
+    <task id="LOCAL-00066" summary="created the login html for authentication.">
+      <created>1550938768833</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1550938768833</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -786,10 +750,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Adding the new weather service file" />
-    <MESSAGE value="fixed reset, Weather services." />
-    <MESSAGE value="Renamed Dao layer to be single so it could be leveraged across data access layers." />
-    <MESSAGE value="New Data access file zone name updates and queries" />
     <MESSAGE value="This file is to reset all the personalized data. zone names, name, zip and openweathermap appid and more." />
     <MESSAGE value="reset DB." />
     <MESSAGE value="Created new Class to input Personalized data through this DA" />
@@ -811,7 +771,11 @@
     <MESSAGE value="fixed the user profile DA in update password selection where it was not converting to hash before storing." />
     <MESSAGE value="returning value in case bad old password was supplied." />
     <MESSAGE value="python requirements file." />
-    <option name="LAST_COMMIT_MESSAGE" value="python requirements file." />
+    <MESSAGE value="change the lower in country variable." />
+    <MESSAGE value="set the country to lower before sending to owm site." />
+    <MESSAGE value="created the login html for authentication." />
+    <MESSAGE value="update style.css with login form details and sprinkler file with authentication needed" />
+    <option name="LAST_COMMIT_MESSAGE" value="update style.css with login form details and sprinkler file with authentication needed" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -917,37 +881,6 @@
           <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/static/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1996">
-          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1077,13 +1010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/services/userAuthenticationcheck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/aak/modules/config/Personal_config.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1091,10 +1017,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/services/weather.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/services/weatherService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/static/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="69" column="26" lean-forward="true" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/services/userAuthenticationcheck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-start-column="2" selection-end-line="13" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/com/aak/modules/db/personalDA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+        <state relative-caret-position="773">
+          <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
           </folding>
@@ -1103,7 +1077,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/com/aak/modules/db/userDA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="721">
           <caret line="50" column="35" lean-forward="true" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
@@ -1111,20 +1085,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/services/weatherService.py">
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/services/weather.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="337">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
         </state>
       </provider>
     </entry>
