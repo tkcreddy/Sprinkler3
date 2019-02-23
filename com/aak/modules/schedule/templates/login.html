@@ -1,27 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login Page</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" rel="stylesheet">
-  </head>
-<body>
+ 	 	 	<link href="/static/style.css" rel="stylesheet" type="text/css">
+{% block body %}
+{% if session['logged_in'] %}
 
-  <body>
-    <div class="container">
-      <h1>Please login</h1>
-      <br>
-      <form action="" method="post">
-        <input name="username" placeholder="Username" type="text" value="{{
-          request.form.username }}">
-         <input name="password" placeholder="Password" type="password" value="{{
-          request.form.password }}">
-        <input class="btn btn-default" type="submit" value="Login">
-      </form>
-      {% if error %}
+You're logged in already!
+
+{% else %}
+
+<form action="/login" method="POST">
+<div class="login">
+<div class="login-screen">
+<div class="app-title">
+<h1>Login</h1>
+</div>
+<div class="login-form">
+<div class="control-group">
+				<input type="text" class="login-field" value="" placeholder="username" name="username">
+<label class="login-field-icon fui-user" for="login-name"></label></div>
+<div class="control-group">
+				<input type="password" class="login-field" value="" placeholder="password" name="password">
+<label class="login-field-icon fui-lock" for="login-pass"></label></div>
+<input type="submit" value="Log in" class="btn btn-primary btn-large btn-block">
+
+</div>
+</div>
+</div>
+</form>{% endif %}
+                  {% if error %}
         <p class="error"><strong>Error:</strong> {{ error }}
       {% endif %}
-    </div>
-  </body>
-</html>
+{% endblock %}
