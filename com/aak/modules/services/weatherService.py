@@ -55,7 +55,7 @@ class Weatherservice(object):
     def __init__(self):
           self.getconfig = Personalcurd()
           self.name, self.email, self.zip, self.country, self.owm_appid = self.getconfig.getPersonaldetails()
-          self.location = self.zip + "," + self.country
+          self.location = self.zip + "," + str(self.country).lower()
           self.settings = {"units": "imperial", "lang": "US", "APPID": self.owm_appid}
 
 
