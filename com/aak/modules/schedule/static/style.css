@@ -8,8 +8,20 @@ outline: none;
 body {
 font-family: Arial;
 background-color: black;
-padding: 50px;
+
 }
+
+
+h4 {
+  color: white;
+   font-family: cursive;
+   font-style: italic;
+}
+
+h5 {
+    color: white;
+    }
+
 .login {
 margin: 20px auto;
 width: 300px;
@@ -83,23 +95,20 @@ margin-top: 12px;
   left: 0;
   }
 
-
-
-
 .item1 { grid-area: header; }
 .item2 { grid-area: menu; }
 .item3 { grid-area: main; }
-.item4 { grid-area: right; }
+.item4 { grid-area: rightheader; }
 .item5 { grid-area: footer; }
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
+    'header header header header rightheader rightheader'
     'menu main main main main main'
     'menu footer footer footer footer footer';
-  grid-gap: 10px;
-  padding: 1px;
+  grid-gap: 0px;
+  padding: 0px;
 }
 
 .grid-container > div {
@@ -107,4 +116,3 @@ margin-top: 12px;
   padding: 1px 0;
   font-size: 30px;
 }
-
