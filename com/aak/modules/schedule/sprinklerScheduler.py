@@ -42,13 +42,23 @@ def remprogram(prgid):
     except Exception as ex:
         traceback.print_exc()
 
+def checkprofile():
+    PA = Personalcurd()
+    name, email, zip, country, owm_appid = PA.getPersonaldetails()
+    print(name, email, zip, country, owm_appid)
+    if name == '' or email == '' or zip == '' or country == '' or owm_appid == '':
+        return 'profile.html'
+    else:
+        return 'index.html'
+
 
 @schedule_app.route('/', methods=['GET'])
 def index():
     if not session.get('logged_in'):
         return render_template('login.html')
     else:
-        return render_template("index.html")
+        return render_template(checkprofile())
+
 
 
 @schedule_app.route('/login', methods=['POST'])
@@ -56,7 +66,7 @@ def do_admin_login():
     login_auth = Userscurd()
     if login_auth.checkAuthentication(request.form['username'],request.form['password']):
         session['logged_in'] = True
-        return render_template('index.html')
+        return render_template(checkprofile())
     else:
         error = 'Invalid Credentials. Please try again.'
         return render_template('login.html', error=error)
@@ -222,4 +232,4 @@ def schedule_getZonelist():
     return  "Zone list details"
 
 
-schedule_app.run(host='0.0.0.0', port=12345)
+schedule_app.run(host='0.0.0.0', port=8080)
