@@ -13,23 +13,23 @@
     <div class="item2"><h5>menu</h5></div>
   <div class="item3"  color='white'><h5 style = "text-align: center; color: black">Update Profile Page</h5>
 
-      <form action = "http://localhost:8080/personalUpdate" method = post>
+      <form action = "/profileUpdate" method = post>
             <div style = font-size:20px;font-color:white;>
                 <table>
-                    <tr><td>
-                    {{ form.name.label }}</td><td>
+                    <tr><td align="left">
+                    {{ form.name.label }}</td><td align="left">
                     {{ form.name }}</td></tr>
-                    <tr><td>
-                    {{ form.email.label }}</td>><td>
+                    <tr><td align="left">
+                    {{ form.email.label }}</td><td align="left">
                     {{ form.email }}</td></tr>
-                    <tr><td>
-                    {{ form.zip.label }}</td>><td>
+                    <tr><td align="left">
+                    {{ form.zip.label }}</td><td align="left">
                     {{ form.zip }}</td></tr>
-                    <tr><td>
-                    {{ form.country.label }}</td>><td>
+                    <tr><td align="left">
+                    {{ form.country.label }}</td><td align="left">
                     {{ form.country }}</td></tr>
-                    <tr><td>
-                    {{ form.owm_appid.label }}</td>><td>
+                    <tr><td align="left">
+                    {{ form.owm_appid.label }}</td><td align="left">
                     {{ form.owm_appid }}</td></tr>
                     <tr> <td></td><td><div class="btn"> {{ form.submit }} </div></td> </tr>
                     </table>
