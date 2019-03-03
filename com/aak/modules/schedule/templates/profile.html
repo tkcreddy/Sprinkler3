@@ -13,38 +13,27 @@
     <div class="item2"><h5>menu</h5></div>
   <div class="item3"  color='white'><h5 style = "text-align: center; color: black">Update Profile Page</h5>
 
-
-
       <form action = "http://localhost:8080/personalUpdate" method = post>
-         <fieldset>
-
-
-            <div margin-left:150px; style = font-size:20px;font-color:white;>
+            <div style = font-size:20px;font-color:white;>
                 <table>
                     <tr><td>
                     {{ form.name.label }}</td><td>
                     {{ form.name }}</td></tr>
                     <tr><td>
                     {{ form.email.label }}</td>><td>
-                        {{ form.email }}</td></tr>
-
+                    {{ form.email }}</td></tr>
                     <tr><td>
                     {{ form.zip.label }}</td>><td>
                     {{ form.zip }}</td></tr>
-
                     <tr><td>
                     {{ form.country.label }}</td>><td>
-                        {{ form.country }}</td></tr>
-
+                    {{ form.country }}</td></tr>
                     <tr><td>
                     {{ form.owm_appid.label }}</td>><td>
                     {{ form.owm_appid }}</td></tr>
-
-                    <tr> <div class="btn"> {{ form.submit }} </div> </tr>
+                    <tr> <td></td><td><div class="btn"> {{ form.submit }} </div></td> </tr>
                     </table>
             </div>
-
-         </fieldset>
       </form>
 
   </div>
