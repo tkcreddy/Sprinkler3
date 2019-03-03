@@ -76,7 +76,7 @@ def do_admin_login():
 def home():
     return render_template('index.html')
 
-@schedule_app.route('/Personal', methods=['GET'])
+@schedule_app.route('/Profile', methods=['GET'])
 def profile():
     form = PersonalForm(request.form)
     return render_template('profile.html',form=form)
@@ -178,7 +178,7 @@ def removeprogram():
     return "Welcome! %s" % jsonify(request.json)
 
 
-@schedule_app.route('/personalUpdate', methods=['POST'])
+@schedule_app.route('/profileUpdate', methods=['POST'])
 def personalUpdate():
     try:
         data = request.form
@@ -186,12 +186,12 @@ def personalUpdate():
         personalObject.updatePersonaldetails(data['name'],data['email'],data['zip'],data['country'],data['owm_appid'])
     except Exception as ex:
         traceback.print_exc()
-    return  redirect(url_for('getpersonal'))
+    return  redirect(url_for('getprofile'))
 
 
 
-@schedule_app.route('/getPersonal', methods=['GET'])
-def getpersonal():
+@schedule_app.route('/getProfile', methods=['GET'])
+def getprofile():
     try:
         personalObject = Personalcurd()
         name, email, zip, country, owm_appid = personalObject.getPersonaldetails()
@@ -199,10 +199,7 @@ def getpersonal():
     except Exception as ex:
         traceback.print_exc()
     finally:
-        # print(name, email, zip, country, owm_appid)
         return render_template('getprofile.html', name=str(name),email=str(email),zip=str(zip),country=str(country),owm_appid=str(owm_appid))
-        #return  "Personal details update %s %s %s %s %s" % (str(name), str(email), str(zip), str(country), str(owm_appid))
-
 
 @schedule_app.route('/zoneinfoUpdate', methods=['POST'])
 def zoneinfoUpdate():
