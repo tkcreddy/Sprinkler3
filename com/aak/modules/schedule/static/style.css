@@ -97,7 +97,7 @@ margin-top: 12px;
 
 .item1 { grid-area: header; }
 .item2 { grid-area: menu; }
-.item3 { grid-area: main; }
+.item3 { grid-area: main; background-color: white; }
 .item4 { grid-area: rightheader; }
 .item5 { grid-area: footer; }
 
