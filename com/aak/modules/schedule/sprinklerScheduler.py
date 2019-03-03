@@ -1,4 +1,4 @@
-from flask import Flask,jsonify,flash, redirect, render_template, request, session, abort
+from flask import Flask,jsonify,flash, redirect, render_template,url_for, request, session, abort
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.jobstores.base import *
 from datetime import datetime
@@ -8,6 +8,7 @@ from com.aak.modules.db.schedDataAccess import Programcurd
 from com.aak.modules.db.personalDA import Personalcurd
 from com.aak.modules.db.zonepersonalDA import Zonecurd
 from com.aak.modules.db.userDA import Userscurd
+from com.aak.modules.UI.personalForm import PersonalForm
 from flask import render_template
 import traceback
 import os
@@ -45,11 +46,11 @@ def remprogram(prgid):
 def checkprofile():
     PA = Personalcurd()
     name, email, zip, country, owm_appid = PA.getPersonaldetails()
-    print(name, email, zip, country, owm_appid)
+    #print(name, email, zip, country, owm_appid)
     if name == '' or email == '' or zip == '' or country == '' or owm_appid == '':
-        return 'profile.html'
+        return 'profile'
     else:
-        return 'index.html'
+        return 'home'
 
 
 @schedule_app.route('/', methods=['GET'])
@@ -57,8 +58,7 @@ def index():
     if not session.get('logged_in'):
         return render_template('login.html')
     else:
-        return render_template(checkprofile())
-
+        return redirect(url_for(checkprofile()))
 
 
 @schedule_app.route('/login', methods=['POST'])
@@ -66,10 +66,21 @@ def do_admin_login():
     login_auth = Userscurd()
     if login_auth.checkAuthentication(request.form['username'],request.form['password']):
         session['logged_in'] = True
-        return render_template(checkprofile())
+        return redirect(url_for(checkprofile()))
     else:
         error = 'Invalid Credentials. Please try again.'
         return render_template('login.html', error=error)
+
+
+@schedule_app.route('/home', methods=['POST','GET'])
+def home():
+    return render_template('index.html')
+
+@schedule_app.route('/Personal', methods=['GET'])
+def profile():
+    form = PersonalForm(request.form)
+    return render_template('profile.html',form=form)
+
 
 @schedule_app.route('/scheduleTime', methods=['POST'])
 def schedule_by_time():
@@ -90,7 +101,7 @@ def schedule_by_time():
 
 
 @schedule_app.route('/listProgram', methods=['GET'])
-def schedule_list():
+def listprogram():
     try:
         for job in scheduler.get_jobs():
             print("name: %s, id: %s, trigger: %s, next run: %s, handler: %s, argument: %s" % (
@@ -104,7 +115,7 @@ def schedule_list():
 
 
 @schedule_app.route('/getProgram', methods=['POST'])
-def schedule_getprogram():
+def getprogram():
     try:
         data = request.get_json()
         job = scheduler.get_job(data.get('prgid'))
@@ -121,7 +132,7 @@ def schedule_getprogram():
 
 
 @schedule_app.route('/scheduleProgram', methods=['POST'])
-def schedule_program():
+def scheduleprogram():
     try:
         data = request.get_json()
         jobd = '{' + data.get('jobdetails') + '}'
@@ -137,7 +148,7 @@ def schedule_program():
 
 
 @schedule_app.route('/updateProgram', methods=['POST'])
-def schedule_updateprogram():
+def updateprogram():
     try:
         data = request.get_json()
         jobd = '{' + data.get('jobdetails') + '}'
@@ -155,7 +166,7 @@ def schedule_updateprogram():
 
 
 @schedule_app.route('/removeProgram', methods=['POST'])
-def schedule_removeprogram():
+def removeprogram():
     try:
         data = request.get_json()
         pjobd = { "":""}
@@ -168,46 +179,44 @@ def schedule_removeprogram():
 
 
 @schedule_app.route('/personalUpdate', methods=['POST'])
-def schedule_personalUpdate():
+def personalUpdate():
     try:
-        data = request.get_json()
+        data = request.form
         personalObject = Personalcurd()
-        personalObject.updatePersonaldetails(data.get('name'),data.get('email'),data.get('zip'),data.get('country'),data.get('owm_appid'))
+        personalObject.updatePersonaldetails(data['name'],data['email'],data['zip'],data['country'],data['owm_appid'])
     except Exception as ex:
-        pass
         traceback.print_exc()
-    return  "Personal details update"
+    return  redirect(url_for('getpersonal'))
 
 
 
 @schedule_app.route('/getPersonal', methods=['GET'])
-def schedule_getPersonal():
+def getpersonal():
     try:
         personalObject = Personalcurd()
         name, email, zip, country, owm_appid = personalObject.getPersonaldetails()
         # print(name,email,zip,country,owm_appid)
     except Exception as ex:
-        pass
         traceback.print_exc()
     finally:
         # print(name, email, zip, country, owm_appid)
-        return  "Personal details update %s %s %s %s %s" % (str(name), str(email), str(zip), str(country), str(owm_appid))
+        return render_template('getprofile.html', name=str(name),email=str(email),zip=str(zip),country=str(country),owm_appid=str(owm_appid))
+        #return  "Personal details update %s %s %s %s %s" % (str(name), str(email), str(zip), str(country), str(owm_appid))
 
 
 @schedule_app.route('/zoneinfoUpdate', methods=['POST'])
-def schedule_zoneinfoUpdate():
+def zoneinfoUpdate():
     try:
         data = request.get_json()
         zoneinfoObject = Zonecurd()
         #zoneinfoObject.updateZonedetails()
         zoneinfoObject.updateZonedetails(data.get('id'),data.get('zname'))
     except Exception as ex:
-        pass
         traceback.print_exc()
     return  "zone details update"
 
 @schedule_app.route('/getZoneinfo', methods=['GET'])
-def schedule_getZoneinfo():
+def getZoneinfo():
     try:
         data = request.get_json()
         zoneinfoObject = Zonecurd()
@@ -220,7 +229,7 @@ def schedule_getZoneinfo():
 
 
 @schedule_app.route('/getZonelist', methods=['GET'])
-def schedule_getZonelist():
+def getZonelist():
     try:
         zoneinfoObject = Zonecurd()
         lists = zoneinfoObject.listAllzones()
