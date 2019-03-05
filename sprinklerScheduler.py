@@ -78,8 +78,16 @@ def home():
 
 @schedule_app.route('/Profile', methods=['GET'])
 def profile():
-    form = PersonalForm(request.form)
-    return render_template('profile.html',form=form)
+    try:
+        form = PersonalForm()
+        personalObject = Personalcurd()
+        name, email, zip, country, owm_appid = personalObject.getPersonaldetails()
+        #form = PersonalForm([('name', name),('email', email),('zip',zip),('country',country),('owm_appid',owm_appid)])
+        #print(name,email,zip,country,owm_appid)
+    except Exception as ex:
+        traceback.print_exc()
+
+    return render_template('profile.html',form=form, name=name,email=email,zip=zip,country=country,owm_appid=owm_appid)
 
 
 @schedule_app.route('/scheduleTime', methods=['POST'])
@@ -230,12 +238,11 @@ def getZonelist():
     try:
         zoneinfoObject = Zonecurd()
         lists = zoneinfoObject.listAllzones()
-        for list in lists:
-            print(list.id , list.name)
+        # for list in lists:
+        #     print(list.id , list.name)
     except Exception as ex:
-        pass
         traceback.print_exc()
-    return  "Zone list details"
+    return  render_template('zonelist.html',zonelists=lists)
 
 
 schedule_app.run(host='0.0.0.0', port=8080)

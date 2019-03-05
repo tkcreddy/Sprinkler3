@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1efe2753-907e-4970-97ec-8140e201d805" name="Default Changelist" comment="Form for capturing all personal information">
-      <change beforePath="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/aak/modules/schedule/templates/getprofile.html" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/schedule/templates/getprofile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/aak/modules/schedule/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/schedule/templates/profile.html" afterDir="false" />
+    <list default="true" id="1efe2753-907e-4970-97ec-8140e201d805" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/com/aak/modules/UI/zoneForm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/aak/modules/db/zonepersonalDA.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/aak/modules/db/zonepersonalDA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/sprinklerScheduler.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,10 +16,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py">
+        <entry file="file://$PROJECT_DIR$/sprinklerScheduler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2068">
-              <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+            <state relative-caret-position="-2086">
+              <caret line="85" column="9" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
               <folding>
                 <element signature="e#0#97#0" expanded="true" />
               </folding>
@@ -31,6 +32,30 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
               <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+              <folding>
+                <element signature="n#style#0;n#h5#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/aak/modules/UI/zoneForm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -55,8 +80,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -74,9 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/com/aak/modules/schedule/schedDao.py" />
-        <option value="$PROJECT_DIR$/com/aak/modules/schedule/sched_read.py" />
-        <option value="$PROJECT_DIR$/com/aak/modules/schedule/schedRead.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/schedule/sched_curd.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/schedule/schedDataAccess.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/sched_curd.py" />
@@ -107,7 +129,6 @@
         <option value="$PROJECT_DIR$/com/aak/modules/config/CONFIG.cfg" />
         <option value="$PROJECT_DIR$/com/aak/modules/config/configRead.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/runtime/runZone.py" />
-        <option value="$PROJECT_DIR$/com/aak/modules/db/zonepersonalDA.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/UI/index.html" />
         <option value="$PROJECT_DIR$/com/aak/modules/UI/style.css" />
         <option value="$PROJECT_DIR$/com/aak/modules/db/userauthDA.py" />
@@ -123,8 +144,12 @@
         <option value="$PROJECT_DIR$/com/aak/modules/UI/personalForm.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/schedule/static/style.css" />
         <option value="$PROJECT_DIR$/com/aak/modules/schedule/templates/getprofile.html" />
-        <option value="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" />
+        <option value="$PROJECT_DIR$/com/aak/modules/db/zonepersonalDA.py" />
+        <option value="$PROJECT_DIR$/com/aak/modules/schedule/templates/zonelist.html" />
+        <option value="$PROJECT_DIR$/com/aak/modules/UI/zoneForm.py" />
         <option value="$PROJECT_DIR$/com/aak/modules/schedule/templates/profile.html" />
+        <option value="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" />
+        <option value="$PROJECT_DIR$/templates/profile.html" />
       </list>
     </option>
   </component>
@@ -165,55 +190,6 @@
               <item name="aak" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Sprinkler3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sprinkler3" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="aak" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sprinkler3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sprinkler3" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="aak" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="device" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sprinkler3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sprinkler3" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="aak" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="schedule" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sprinkler3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sprinkler3" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="aak" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="schedule" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sprinkler3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sprinkler3" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="aak" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sprinkler3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sprinkler3" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="aak" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -230,11 +206,11 @@
       <recent name="$PROJECT_DIR$/com/aak/modules/schedule/templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/" />
       <recent name="$PROJECT_DIR$/com/aak/modules/schedule/static" />
       <recent name="$PROJECT_DIR$/com/aak/modules/schedule" />
       <recent name="$PROJECT_DIR$/com/aak/modules/schedule/templates" />
       <recent name="$PROJECT_DIR$/com/aak/modules/services" />
-      <recent name="$PROJECT_DIR$/com/aak/modules/schedule/scripts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -283,7 +259,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sprinklerScheduler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -309,34 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546471788550</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Adding the new weather service file">
-      <created>1549531653360</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1549531653360</updated>
-    </task>
-    <task id="LOCAL-00031" summary="fixed reset, Weather services.">
-      <created>1549580928177</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1549580928177</updated>
-    </task>
-    <task id="LOCAL-00032" summary="fixed reset, Weather services.">
-      <created>1549581516932</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1549581516932</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Renamed Dao layer to be single so it could be leveraged across data access layers.">
-      <created>1549661881635</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1549661881635</updated>
     </task>
     <task id="LOCAL-00034" summary="New Data access file zone name updates and queries">
       <created>1549664525703</created>
@@ -653,7 +601,35 @@
       <option name="project" value="LOCAL" />
       <updated>1551596665859</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="updated post to relative path instead of absolutepath and rename the post destination to profileupdate from personalupdate">
+      <created>1551648862729</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1551648862729</updated>
+    </task>
+    <task id="LOCAL-00080" summary="changed the URI from personal to profile">
+      <created>1551648907428</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1551648907428</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Form for capturing all personal information">
+      <created>1551649013541</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1551649013541</updated>
+    </task>
+    <task id="LOCAL-00082" summary="moved templates and static directory to top level package directory.">
+      <created>1551744131646</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1551744131646</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -679,33 +655,9 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24947146" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49682876" weight="0.32921812" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.4883721" visible="true" weight="0.3314917" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.4982382" weight="0.39917696" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.5863284" weight="0.32921812" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5116279" side_tool="true" weight="0.3314917" />
-      <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.49964765" weight="0.32921812" />
-      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32921812" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Added new Userreset class for reseting default user and password." />
-    <MESSAGE value="added new Data Access class for handling authentication profile into the systems. This class is to handle table with inserting of username and password, update password and more." />
-    <MESSAGE value="added new method to update password." />
     <MESSAGE value="Added new default user and password reset module." />
     <MESSAGE value="fixed the spelling mistake in Personalized class from &quot;Pernonalized&quot; to &quot;Personalized&quot;" />
     <MESSAGE value="fixed the Personalized class spelling called from dbDao class." />
@@ -726,20 +678,15 @@
     <MESSAGE value="Form to update profile" />
     <MESSAGE value="update css to add backgroud-color white" />
     <MESSAGE value="update to forward profile and getprofile" />
-    <MESSAGE value="Form for capturing all personal information" />
     <MESSAGE value="updated post to relative path instead of absolutepath and rename the post destination to profileupdate from personalupdate" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated post to relative path instead of absolutepath and rename the post destination to profileupdate from personalupdate" />
+    <MESSAGE value="changed the URI from personal to profile" />
+    <MESSAGE value="Form for capturing all personal information" />
+    <MESSAGE value="Added Value for the fields" />
+    <MESSAGE value="moved templates and static directory to top level package directory." />
+    <option name="LAST_COMMIT_MESSAGE" value="moved templates and static directory to top level package directory." />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sample_board.py" />
-    <entry file="file://$PROJECT_DIR$/com/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/aak/modules/runtime/rungpiojob.py" />
     <entry file="file://$PROJECT_DIR$/com/aak/modules/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -872,13 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/db/zonepersonalDA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" selection-start-line="13" selection-end-line="24" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/aak/modules/config/Personal_config.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -910,7 +850,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="40" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
@@ -1012,36 +952,53 @@
         <state relative-caret-position="-108782" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
           <caret line="21" column="79" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="79" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/static/style.css">
+    <entry file="file://$PROJECT_DIR$/static/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="99" column="52" selection-start-line="99" selection-start-column="52" selection-end-line="99" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/templates/profile.html">
+    <entry file="file://$PROJECT_DIR$/templates/zonelist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        <state relative-caret-position="264">
+          <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
           <folding>
             <element signature="n#style#0;n#h5#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/templates/getprofile.html">
+    <entry file="file://$PROJECT_DIR$/templates/getprofile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+        <state>
+          <caret column="15" selection-end-line="42" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#h5#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/db/zonepersonalDA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/config/resetPersonalization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#83#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1056,20 +1013,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/config/resetPersonalization.py">
+    <entry file="file://$PROJECT_DIR$/templates/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="315">
+          <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
           <folding>
-            <element signature="e#0#83#0" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/aak/modules/schedule/sprinklerScheduler.py">
+    <entry file="file://$PROJECT_DIR$/com/aak/modules/UI/zoneForm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2068">
-          <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+        <state relative-caret-position="210">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sprinklerScheduler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2086">
+          <caret line="85" column="9" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
           <folding>
             <element signature="e#0#97#0" expanded="true" />
           </folding>
