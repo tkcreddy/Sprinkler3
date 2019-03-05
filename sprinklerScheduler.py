@@ -82,12 +82,35 @@ def profile():
         form = PersonalForm()
         personalObject = Personalcurd()
         name, email, zip, country, owm_appid = personalObject.getPersonaldetails()
-        #form = PersonalForm([('name', name),('email', email),('zip',zip),('country',country),('owm_appid',owm_appid)])
-        #print(name,email,zip,country,owm_appid)
     except Exception as ex:
         traceback.print_exc()
 
     return render_template('profile.html',form=form, name=name,email=email,zip=zip,country=country,owm_appid=owm_appid)
+
+
+@schedule_app.route('/profileUpdate', methods=['POST'])
+def personalUpdate():
+    try:
+        data = request.form
+        personalObject = Personalcurd()
+        personalObject.updatePersonaldetails(data['name'],data['email'],data['zip'],data['country'],data['owm_appid'])
+    except Exception as ex:
+        traceback.print_exc()
+    return  redirect(url_for('getprofile'))
+
+
+
+@schedule_app.route('/getProfile', methods=['GET'])
+def getprofile():
+    try:
+        personalObject = Personalcurd()
+        name, email, zip, country, owm_appid = personalObject.getPersonaldetails()
+        # print(name,email,zip,country,owm_appid)
+    except Exception as ex:
+        traceback.print_exc()
+    finally:
+        return render_template('getprofile.html', name=str(name),email=str(email),zip=str(zip),country=str(country),owm_appid=str(owm_appid))
+
 
 
 @schedule_app.route('/scheduleTime', methods=['POST'])
@@ -186,28 +209,6 @@ def removeprogram():
     return "Welcome! %s" % jsonify(request.json)
 
 
-@schedule_app.route('/profileUpdate', methods=['POST'])
-def personalUpdate():
-    try:
-        data = request.form
-        personalObject = Personalcurd()
-        personalObject.updatePersonaldetails(data['name'],data['email'],data['zip'],data['country'],data['owm_appid'])
-    except Exception as ex:
-        traceback.print_exc()
-    return  redirect(url_for('getprofile'))
-
-
-
-@schedule_app.route('/getProfile', methods=['GET'])
-def getprofile():
-    try:
-        personalObject = Personalcurd()
-        name, email, zip, country, owm_appid = personalObject.getPersonaldetails()
-        # print(name,email,zip,country,owm_appid)
-    except Exception as ex:
-        traceback.print_exc()
-    finally:
-        return render_template('getprofile.html', name=str(name),email=str(email),zip=str(zip),country=str(country),owm_appid=str(owm_appid))
 
 @schedule_app.route('/zoneinfoUpdate', methods=['POST'])
 def zoneinfoUpdate():
