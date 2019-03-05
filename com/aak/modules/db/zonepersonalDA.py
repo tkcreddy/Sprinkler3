@@ -51,8 +51,9 @@ class Zonecurd(object):
         finally:
             #session.commit()
             #print(self.list)
-            return self.results
             session.close()
+            return self.results
+
 #x = Zonecurd()
 
 
