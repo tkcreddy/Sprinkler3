@@ -16,15 +16,18 @@
 
             <div style = font-size:20px;>
 
-                <table border="1">
+            <form action = "/zoneinfoUpdate" method = post>
+            <div style = font-size:20px;font-color:white;>
+                <table>
                     {% for list in zonelists %}
                     <tr><td align="left">
-                    zone {{ list.id }}</td><td align="left" width="300">
-                    {{ list.name }}</td></tr>
+                    zone{{ list.id }} {{ form.id (value=list.id,readonly=true) }}</td><td align="left">
+                    {{ form.name(value=list.name) }}</td></tr>
                     {% endfor %}
+                    <tr> <td></td><td><div class="btn"> {{ form.submit }} </div></td> </tr>
                     </table>
             </div>
-
+            </form>
   </div>
 
   <div class="item5"><h5>Footer</h5></div>
