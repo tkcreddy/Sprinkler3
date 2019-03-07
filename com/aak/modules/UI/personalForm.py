@@ -5,11 +5,11 @@ from wtforms import validators, ValidationError
 
 
 class PersonalForm(FlaskForm):
-    name = StringField("name", [validators.DataRequired("Please enteryour name.")])
-    email = StringField("email", [validators.DataRequired("Please enter your email address."),
+    name = StringField("Name", [validators.DataRequired("Please enteryour name.")])
+    email = StringField("Email", [validators.DataRequired("Please enter your email address."),
                                 validators.Email("Please enter your email address.")])
-    zip = IntegerField("zip", [validators.DataRequired("Please enter Zip Code."), validators.length(max=6)])
-    country = StringField('country', [validators.DataRequired("Please enter Country Code."),
+    zip = IntegerField("Zip", [validators.DataRequired("Please enter Zip Code."), validators.length(max=6)])
+    country = StringField('Country', [validators.DataRequired("Please enter Country Code."),
                                 validators.length(max=2)])
     owm_appid = StringField("owm_appid")
     submit = SubmitField("Save")
