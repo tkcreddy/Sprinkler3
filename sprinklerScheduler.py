@@ -9,6 +9,7 @@ from com.aak.modules.db.personalDA import Personalcurd
 from com.aak.modules.db.zonepersonalDA import Zonecurd
 from com.aak.modules.db.userDA import Userscurd
 from com.aak.modules.UI.personalForm import PersonalForm
+from com.aak.modules.UI.zoneForm import ZoneForm
 from flask import render_template
 import traceback
 import os
@@ -25,7 +26,7 @@ scheduler = BackgroundScheduler()
 scheduler.add_jobstore('sqlalchemy', url='sqlite:///'+ sql_loc)
 scheduler.start()
 
-
+zoneDict = {'zone1': 1, 'zone2': 2, 'zone3': 3, 'zone4': 4, 'zone5': 5, 'zone6': 6, 'zone7': 7, 'zone8': 8}
 
 def addprogram(prgid,dow,hour,min ):
     try:
@@ -52,6 +53,20 @@ def checkprofile():
     else:
         return 'home'
 
+def znumret(name):
+    znum = zoneDict[name]
+    return znum
+
+def znameret(id):
+    znam = dict((v,k) for k,v in zoneDict.items()).get(id)
+    return znam
+
+
+def xstr(s):
+    if s is None:
+        return ''
+    return str(s)
+
 
 @schedule_app.route('/', methods=['GET'])
 def index():
@@ -74,42 +89,53 @@ def do_admin_login():
 
 @schedule_app.route('/home', methods=['POST','GET'])
 def home():
-    return render_template('index.html')
+    if not session.get('logged_in'):
+        return render_template('login.html')
+    else:
+        return render_template('index.html')
 
 @schedule_app.route('/Profile', methods=['GET'])
 def profile():
-    try:
-        form = PersonalForm()
-        personalObject = Personalcurd()
-        name, email, zip, country, owm_appid = personalObject.getPersonaldetails()
-    except Exception as ex:
-        traceback.print_exc()
-
-    return render_template('profile.html',form=form, name=name,email=email,zip=zip,country=country,owm_appid=owm_appid)
+    if not session.get('logged_in'):
+        return render_template('login.html')
+    else:
+        try:
+            form = PersonalForm()
+            personalObject = Personalcurd()
+            name, email, zip, country, owm_appid = personalObject.getPersonaldetails()
+        except Exception as ex:
+            traceback.print_exc()
+        return render_template('profile.html',form=form, name=name,email=email,zip=zip,country=country,owm_appid=owm_appid)
 
 
 @schedule_app.route('/profileUpdate', methods=['POST'])
 def personalUpdate():
-    try:
-        data = request.form
-        personalObject = Personalcurd()
-        personalObject.updatePersonaldetails(data['name'],data['email'],data['zip'],data['country'],data['owm_appid'])
-    except Exception as ex:
-        traceback.print_exc()
-    return  redirect(url_for('getprofile'))
+    if not session.get('logged_in'):
+        return render_template('login.html')
+    else:
+        try:
+            data = request.form
+            personalObject = Personalcurd()
+            personalObject.updatePersonaldetails(data['name'],data['email'],data['zip'],data['country'],data['owm_appid'])
+        except Exception as ex:
+            traceback.print_exc()
+        return  redirect(url_for('getprofile'))
 
 
 
 @schedule_app.route('/getProfile', methods=['GET'])
 def getprofile():
-    try:
-        personalObject = Personalcurd()
-        name, email, zip, country, owm_appid = personalObject.getPersonaldetails()
-        # print(name,email,zip,country,owm_appid)
-    except Exception as ex:
-        traceback.print_exc()
-    finally:
-        return render_template('getprofile.html', name=str(name),email=str(email),zip=str(zip),country=str(country),owm_appid=str(owm_appid))
+    if not session.get('logged_in'):
+        return render_template('login.html')
+    else:
+        try:
+            personalObject = Personalcurd()
+            name, email, zip, country, owm_appid = personalObject.getPersonaldetails()
+            # print(name,email,zip,country,owm_appid)
+        except Exception as ex:
+            traceback.print_exc()
+        finally:
+            return render_template('getprofile.html', name=str(name),email=str(email),zip=str(zip),country=str(country),owm_appid=str(owm_appid))
 
 
 
@@ -120,7 +146,7 @@ def schedule_by_time():
         time = data.get('time')
         prgid = data.get('prgid')
         date_time = datetime.strptime(str(time), '%Y-%m-%dT%H:%M')
-        job = scheduler.add_job(Runjobs, args=[prgid], trigger='date', next_run_time=str(date_time))
+        scheduler.add_job(Runjobs, args=[prgid], trigger='date', next_run_time=str(date_time))
 
     except ConflictingIdError as ex:
         print("Please delete the Program and re-added it")
@@ -213,10 +239,12 @@ def removeprogram():
 @schedule_app.route('/zoneinfoUpdate', methods=['POST'])
 def zoneinfoUpdate():
     try:
-        data = request.get_json()
+        #data = request.get_json()
+        data = request.form
         zoneinfoObject = Zonecurd()
         #zoneinfoObject.updateZonedetails()
-        zoneinfoObject.updateZonedetails(data.get('id'),data.get('zname'))
+
+        zoneinfoObject.updateZonedetails(data.get('id'),xstr(data.get('zname')))
     except Exception as ex:
         traceback.print_exc()
     return  "zone details update"
@@ -224,6 +252,7 @@ def zoneinfoUpdate():
 @schedule_app.route('/getZoneinfo', methods=['GET'])
 def getZoneinfo():
     try:
+
         data = request.get_json()
         zoneinfoObject = Zonecurd()
         name = zoneinfoObject.getZonedetails(data.get('id'))
@@ -234,16 +263,25 @@ def getZoneinfo():
     return  "Zone details Get"
 
 
-@schedule_app.route('/getZonelist', methods=['GET'])
+@schedule_app.route('/getZone', methods=['GET'])
 def getZonelist():
-    try:
-        zoneinfoObject = Zonecurd()
-        lists = zoneinfoObject.listAllzones()
-        # for list in lists:
-        #     print(list.id , list.name)
-    except Exception as ex:
-        traceback.print_exc()
-    return  render_template('zonelist.html',zonelists=lists)
+    if not session.get('logged_in'):
+        return render_template('login.html')
+    else:
+        try:
+            form = ZoneForm()
+            zoneinfoObject = Zonecurd()
+            lists = zoneinfoObject.listAllzones()
+            zlists ={}
+            for list in lists:
+                zlists[znameret(list.id)] = list.name
+                #print(list.id , list.name)
+            for k, v in zlists.items():
+                print(k, v)
+
+        except Exception as ex:
+            traceback.print_exc()
+        return  render_template('zonelist.html',form=form,zonelists=lists)
 
 
 schedule_app.run(host='0.0.0.0', port=8080)
