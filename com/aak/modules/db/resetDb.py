@@ -2,7 +2,7 @@ from com.aak.modules.db.schedDataAccess import Programcurd
 from com.aak.modules.db.personalDA import Personalcurd
 from com.aak.modules.db.zonepersonalDA import Zonecurd
 from com.aak.modules.config.configRead import Configread
-from com.aak.modules.db.dbDao import Dbdao,Users
+from com.aak.modules.db.dbDao import Dbdao,Users,Zonepersonal
 
 class Schedreset(object):
     def __init__(self):
@@ -21,6 +21,11 @@ class Personalreset(object):
 
 class Zonereset(object):
     def __init__(self):
+        self.zonep = Zonepersonal()
+        self.x = Dbdao()
+        self.engine = self.x.Connect()
+        self.zonep.__table__.drop(self.engine)
+
         self.Da = Zonecurd()
         self.getConfig = Configread()
         self.num_zones = int(self.getConfig.num_zones()) + 1
