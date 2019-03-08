@@ -3,6 +3,7 @@ Click==7.0
 Flask==1.0.2
 Flask-APScheduler==1.11.0
 Flask-SQLAlchemy==2.3.2
+Flask-WTF==0.14.2
 GPIOSimulator==0.1
 itsdangerous==1.1.0
 Jinja2==2.10
@@ -24,3 +25,4 @@ sqlalchemy-json==0.2.3
 SQLAlchemy-Utils==0.33.11
 tzlocal==1.5.1
 Werkzeug==0.14.1
+WTForms==2.2.1
