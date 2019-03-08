@@ -9,7 +9,7 @@ from com.aak.modules.db.personalDA import Personalcurd
 from com.aak.modules.db.zonepersonalDA import Zonecurd
 from com.aak.modules.db.userDA import Userscurd
 from com.aak.modules.UI.personalForm import PersonalForm
-from com.aak.modules.UI.zoneForm import ZoneForm
+from com.aak.modules.UI.zoneForm import ZoneForm,ZonelistForm
 from flask import render_template
 import traceback
 import os
@@ -154,9 +154,6 @@ def schedule_by_time():
 
     return "job details: %s" % ex , 200
 
-
-
-
 @schedule_app.route('/listProgram', methods=['GET'])
 def listprogram():
     try:
@@ -168,8 +165,6 @@ def listprogram():
             traceback.print_exc()
 
     return "Welcome! %s" % jsonify(request.json)
-
-
 
 @schedule_app.route('/getProgram', methods=['POST'])
 def getprogram():
@@ -184,9 +179,6 @@ def getprogram():
             print("Getting none rows")
             #traceback.print_exc()
     return "Welcome!"
-
-
-
 
 @schedule_app.route('/scheduleProgram', methods=['POST'])
 def scheduleprogram():
@@ -239,15 +231,14 @@ def removeprogram():
 @schedule_app.route('/zoneinfoUpdate', methods=['POST'])
 def zoneinfoUpdate():
     try:
-        #data = request.get_json()
         data = request.form
         zoneinfoObject = Zonecurd()
         #zoneinfoObject.updateZonedetails()
-
-        zoneinfoObject.updateZonedetails(data.get('id'),xstr(data.get('zname')))
+        print(str(data))
+        zoneinfoObject.updateZonedetails(data.get('id'),xstr(data.get('name')))
     except Exception as ex:
         traceback.print_exc()
-    return  "zone details update"
+    return  redirect(url_for('getZonelist'))
 
 @schedule_app.route('/getZoneinfo', methods=['GET'])
 def getZoneinfo():
@@ -272,12 +263,11 @@ def getZonelist():
             form = ZoneForm()
             zoneinfoObject = Zonecurd()
             lists = zoneinfoObject.listAllzones()
-            zlists ={}
-            for list in lists:
-                zlists[znameret(list.id)] = list.name
-                #print(list.id , list.name)
-            for k, v in zlists.items():
-                print(k, v)
+            # zlists ={}
+            # for list in lists:
+            #     zlists[znameret(list.id)] = list.name
+            # for k, v in zlists.items():
+            #     print(k, v)
 
         except Exception as ex:
             traceback.print_exc()
