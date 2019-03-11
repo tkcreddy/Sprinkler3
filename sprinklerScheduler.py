@@ -278,7 +278,7 @@ def getZonelist():
 
         except Exception as ex:
             traceback.print_exc()
-        return  render_template('zonelist.html',form=zonelistform,zonelists=lists)
+        return  render_template('zonelist.html',form=zonelistform)
 
 
 schedule_app.run(host='0.0.0.0', port=8080)
