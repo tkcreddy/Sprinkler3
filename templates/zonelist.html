@@ -13,19 +13,29 @@
     <div class="item2"><h5>menu</h5></div>
   <div class="item3"  color='white'><h5 style = "text-align: center; color: black">Zone List</h5>
 
-
+  <form action = "/zoneinfoUpdate" method = post>
     <table>
-    {% for list in zonelists %}
-      <form action = "/zoneinfoUpdate" method = post>
+        {{ form.hidden_tag() }}
+
+    {% for list in form.zonelists %}
           <div style = font-size:20px;font-color:white;>
-              <tr><td align="left">
-                zone {{ list.id }} {{form.id (value=list.id) }} </td><td align="left">
-                {{ form.name (value=list.name) }}</td><td><div class="btn"> {{ form.submit }} </div></td> </tr>
+
+              <tr>
+                  {% for field in list %}
+
+                  <td align="left"> {{ field }}  </td>
+
+
+                  {% endfor %}
+              </tr>
           </div>
 
-      </form>
+
     {% endfor %}
+
+          <tr><td></td><td><div class="btn"> {{ form.submit }} </div></td> </tr>
     </table>
+    </form>
   </div>
 
   <div class="item5"><h5>Footer</h5></div>
