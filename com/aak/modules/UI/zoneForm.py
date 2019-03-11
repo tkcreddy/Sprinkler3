@@ -7,9 +7,9 @@ from wtforms import validators, ValidationError
 class ZoneForm(FlaskForm):
     id = HiddenField("id")
     name = StringField("name")
-    submit = SubmitField("Save")
+
 
 
 class ZonelistForm(FlaskForm):
-    zonelistname = StringField("name")
-    zonedetails = FieldList(FormField(ZoneForm))
+    zonelists = FieldList(FormField(ZoneForm))
+    submit = SubmitField("Save")
