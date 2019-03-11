@@ -16,21 +16,36 @@
       <form action = "/profileUpdate" method = post>
             <div style = font-size:20px;font-color:white;>
                 <table>
-                    <tr><td align="left">
-                    {{ form.name.label }}</td><td align="left">
-                    {{ form.name(value=name) }}</td></tr>
-                    <tr><td align="left">
-                    {{ form.email.label }}</td><td align="left">
-                    {{ form.email(value=email) }}</td></tr>
-                    <tr><td align="left">
-                    {{ form.zip.label }}</td><td align="left">
-                    {{ form.zip(value=zip) }}</td></tr>
-                    <tr><td align="left">
-                    {{ form.country.label }}</td><td align="left">
-                    {{ form.country(value=country) }}</td></tr>
-                    <tr><td align="left">
-                    {{ form.owm_appid.label }}</td><td align="left">
-                    {{ form.owm_appid(value=owm_appid) }}</td></tr>
+                    <tr>
+                        <td align="left">
+                    {{ form.name.label }}</td>
+                        <td align="left">
+                    {{ form.name(value=name) }}</td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                    {{ form.email.label }}</td>
+                        <td align="left">
+                    {{ form.email(value=email) }}</td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                    {{ form.zip.label }}</td>
+                        <td align="left">
+                    {{ form.zip(value=zip) }}</td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                    {{ form.country.label }}</td>
+                        <td align="left">
+                    {{ form.country(value=country) }}</td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                    {{ form.owm_appid.label }}</td>
+                        <td align="left">
+                    {{ form.owm_appid(value=owm_appid) }}</td>
+                    </tr>
                     <tr> <td></td><td><div class="btn"> {{ form.submit }} </div></td> </tr>
                     </table>
             </div>
