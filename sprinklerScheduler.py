@@ -10,7 +10,8 @@ from com.aak.modules.db.zonepersonalDA import Zonecurd
 from com.aak.modules.db.userDA import Userscurd
 from com.aak.modules.UI.personalForm import PersonalForm
 from com.aak.modules.UI.zoneForm import ZoneForm,ZonelistForm
-from flask import render_template
+# from flask import render_template
+from flask_wtf import FlaskForm,Form
 import traceback
 import os
 import json
@@ -228,17 +229,23 @@ def removeprogram():
 
 
 
-@schedule_app.route('/zoneinfoUpdate', methods=['POST'])
+@schedule_app.route('/zoneinfoUpdate', methods=['POST', 'GET'])
 def zoneinfoUpdate():
-    try:
-        data = request.form
-        zoneinfoObject = Zonecurd()
-        #zoneinfoObject.updateZonedetails()
-        print(str(data))
-        zoneinfoObject.updateZonedetails(data.get('id'),xstr(data.get('name')))
-    except Exception as ex:
-        traceback.print_exc()
-    return  redirect(url_for('getZonelist'))
+    if request.method == 'GET':
+        return getZonelist()
+    if request.method == 'POST':
+
+        try:
+            zoneform = ZoneForm()
+            zonelistform = ZonelistForm()
+            zoneinfoObject = Zonecurd()
+            for list in zonelistform.zonelists:
+                zid = int(list.data['id'])
+                zoneinfoObject.updateZonedetails(zid, list.data['name'])
+
+        except Exception as ex:
+            traceback.print_exc()
+        return  redirect(url_for('getZonelist'))
 
 @schedule_app.route('/getZoneinfo', methods=['GET'])
 def getZoneinfo():
@@ -260,18 +267,18 @@ def getZonelist():
         return render_template('login.html')
     else:
         try:
-            form = ZoneForm()
+            zoneform = ZoneForm()
+            zonelistform = ZonelistForm()
             zoneinfoObject = Zonecurd()
             lists = zoneinfoObject.listAllzones()
-            # zlists ={}
-            # for list in lists:
-            #     zlists[znameret(list.id)] = list.name
-            # for k, v in zlists.items():
-            #     print(k, v)
+            for list in lists:
+                zoneform.id = list.id
+                zoneform.name = list.name
+                zonelistform.zonelists.append_entry(zoneform)
 
         except Exception as ex:
             traceback.print_exc()
-        return  render_template('zonelist.html',form=form,zonelists=lists)
+        return  render_template('zonelist.html',form=zonelistform,zonelists=lists)
 
 
 schedule_app.run(host='0.0.0.0', port=8080)
